@@ -128,5 +128,17 @@ class Warrior(Character):
 		
 		print('\t Normal attack damage: {}'.format(normalAttackDamage))
 		
+		self.warriorTotalAttacks += 1
+
+		# update weapon skill level
+		if( self.getWarriorTotalAttacks() >= self.getWarriorTotalAttacksToNextWeaponSkillLevel() ):
+			self.warriorWeaponSkillLevel += 1
+			print('\n\t ...Weapon Skill Level UPED!')
+			print('\t Currently Weapon Skill Level: {}'.format(self.getWarriorWeaponSkillLevel()))
+			self.warriorTotalAttacksToNextWeaponSkillLevel *= 2
+			print('\t Currently total attacks: {}'.format(self.getWarriorTotalAttacks()))
+			print('\t Total Attacks to next Weapon Skill Level: {}\n'.format(self.getWarriorTotalAttacksToNextWeaponSkillLevel()))
+
+
 		return normalAttackDamage
 	

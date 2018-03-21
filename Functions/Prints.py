@@ -45,12 +45,12 @@ def Introductions_Print():
 
 
 def Fight_Round_Print():
-	print('\n\t ---> FIGHT ROUND <---')
+	print('\n\t --------> FIGHT ROUND <--------')
 
 
 
 def Round_Status_Print():
-	print('\n\t --- ROUND STATUS ---')
+	print('\n\t -------- ROUND STATUS --------')
 
 def Player_Defeated_Monster():
 	print('\n\n\t ....Player Defeated the Monster!\n\n')

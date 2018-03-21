@@ -184,7 +184,7 @@ class Mage(Character):
 				print('\n\t ...Magic Level UPED!')
 				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
 				self.mageManaUsedToNextMagicLevel *= 2.5
-				print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
+				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageLightSpellDamage 
 		
@@ -215,7 +215,7 @@ class Mage(Character):
 				print('\n\t ...Magic Level UPED!')
 				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
 				self.mageManaUsedToNextMagicLevel *= 2.5
-				print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
+				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageMediumSpellDamage
 		
@@ -246,7 +246,7 @@ class Mage(Character):
 				print('\n\t ...Magic Level UPED!')
 				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
 				self.mageManaUsedToNextMagicLevel *= 2.5
-				print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
+				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageStrongSpellDamage
 		

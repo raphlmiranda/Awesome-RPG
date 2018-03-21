@@ -55,7 +55,7 @@ class MagicMonster(LivingBeing):
 		self.magicMonsterSpellDamage = magicMonsterSpellDamage
 		self.magicMonsterName = magicMonsterName
 		self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
-		self.magicMonsterLoot = randint(200, 500)
+		self.magicMonsterLoot = randint(250, 700)
 
 	
 	def setMagicMonsterName(self,  magicMonsterName ):

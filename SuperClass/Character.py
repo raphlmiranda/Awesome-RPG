@@ -130,7 +130,7 @@ class Character(LivingBeing):
 		self.characterCurrentlyHealthPotions += healthPotions
 
 	def addManaPotions(self, manaPotions):
-		self.characterCurrentlyHealthPotions += manaPotions
+		self.characterCurrentlyManaPotions += manaPotions
 
 
 
@@ -181,7 +181,7 @@ class Character(LivingBeing):
 				while manaPotionsToUse != 0:
 					manaCure = randint(75, 125)
 					self.livingBeingCurrentlyLife += manaCure
-					self.totalHealthPotions -= 1
+					self.characterCurrentlyManaPotions-= 1
 					print('\t You healed {} points of mana!'.format(manaCure))
 					manaPotionsToUse -= 1
 			else:

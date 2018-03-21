@@ -32,6 +32,10 @@ from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_INITIAL_MANA
 from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_ADD_MANA_FOR_LEVEL, KNIGHT_ADD_LIFE_FOR_LEVEL
 from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_REG_LIFE_EACH_TURN, KNIGHT_REG_MANA_EACH_TURN
 
+from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_LIGHT_SPELL_MANA_USED
+from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_MEDIUM_SPELL_MANA_USED
+from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_STRONG_SPELL_MANA_USED
+
 class Knight(Warrior):
 
 	'''
@@ -104,19 +108,22 @@ class Knight(Warrior):
 
 		self.characterCurrentlyMana = KNIGHT_INITIAL_MANA
 
-		self.knightManaUsedToNextMagicLevel = 500
+		self.knightManaUsedToNextMagicLevel = 200
 
 	def getLightSpellManaUsed(self):
-		return 100
+		return KNIGHT_LIGHT_SPELL_MANA_USED
 
 	def getMediumSpellManaUsed(self):
-		return 200
+		return KNIGHT_MEDIUM_SPELL_MANA_USED
 
 	def getStrongSpellManaUsed(self):
-		return 340
+		return KNIGHT_STRONG_SPELL_MANA_USED
 
 	def getKnightTotalMana(self):
 		return self.knightTotalMana
+
+	def getKnightManaUsedToNextMagicLevel(self):
+		return self.knightManaUsedToNextMagicLevel
 
 	def getCharacterCurrentlyMana(self):
 		return self.characterCurrentlyMana
@@ -136,6 +143,15 @@ class Knight(Warrior):
 			print('\t Spell Damage: {}'.format(spellDamage))
 
 			self.characterCurrentlyMana -= self.getLightSpellManaUsed()
+
+			# update magic level
+			if( self.getCharacterTotalManaUsed() >= self.getKnightManaUsedToNextMagicLevel() ):
+				self.characterCurrentlyMagicLevel += 1
+				print('\n\t ...Magic Level UPED!')
+				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+				self.mageManaUsedToNextMagicLevel *= 5
+				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
+
 
 			return spellDamage
 
@@ -159,6 +175,15 @@ class Knight(Warrior):
 
 			self.characterCurrentlyMana -= self.getMediumSpellManaUsed()
 
+			# update magic level
+			if( self.getCharacterTotalManaUsed() >= self.getKnightManaUsedToNextMagicLevel() ):
+				self.characterCurrentlyMagicLevel += 1
+				print('\n\t ...Magic Level UPED!')
+				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+				self.knightManaUsedToNextMagicLevel *= 5
+				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getKnightManaUsedToNextMagicLevel()))
+
+
 			return spellDamage
 
 		else:
@@ -171,16 +196,24 @@ class Knight(Warrior):
 		if self.getCharacterCurrentlyMana() >= self.getStrongSpellManaUsed():
 
 			baseAttack = self.getWarriorWeaponSkillLevel() * self.getWarriorWeaponAttack()
-			baseAttackFirst = baseAttack * 2.2
-			baseAttackSecond = baseAttack * 3.0
+			baseAttackFirst = int(baseAttack * 2.2)
+			baseAttackSecond = int(baseAttack * 3.0)
 
 			print('\n\t ' + self.getCharacterName() + " says: EXORI GRAN")
 
-			spellDamage = randint(baseAttackFirst, baseAttackFirst)
+			spellDamage = randint(baseAttackFirst, baseAttackSecond)
 
 			print('\t Spell Damage: {}'.format(spellDamage))
 
 			self.characterCurrentlyMana -= self.getStrongSpellManaUsed()
+
+			# update magic level
+			if( self.getCharacterTotalManaUsed() >= self.getKnightManaUsedToNextMagicLevel() ):
+				self.characterCurrentlyMagicLevel += 1
+				print('\n\t ...Magic Level UPED!')
+				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+				self.mageManaUsedToNextMagicLevel *= 5
+				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return spellDamage
 
@@ -210,7 +243,7 @@ class Knight(Warrior):
 			self.characterCurrentlyLevel += 1
 			self.knightTotalMana += KNIGHT_ADD_MANA_FOR_LEVEL
 			self.livingBeingTotalLife += KNIGHT_ADD_LIFE_FOR_LEVEL
-			print('\t ... PLAYER UPED LEVEL!')
+			print('\n\t ... PLAYER UPED LEVEL!')
 			print('\t Total Life + {} points!'.format(KNIGHT_ADD_LIFE_FOR_LEVEL))
 			print('\t Total Mana + {} points!'.format(KNIGHT_ADD_MANA_FOR_LEVEL))
 			print('\t Currently Player Level: {}'.format(self.getCharacterCurrentlyLevel()))
