@@ -60,7 +60,7 @@ def Mage_Spells( Player ):
 				break
 
 			else:
-				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getLightSpellManaUsed()))
+				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMageLightSpellManaUsed()))
 				continue
 
 		# Return MEDIUM SPEEL
@@ -70,7 +70,7 @@ def Mage_Spells( Player ):
 				return 42
 				break
 			else:
-				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMediumSpellManaUsed()))
+				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMageMediumSpellManaUsed()))
 				continue
 
 		# Return STRONG SPELL
@@ -79,7 +79,7 @@ def Mage_Spells( Player ):
 				return 43
 				break
 			else:
-				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getStrongSpellManaUsed()))
+				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMageStrongSpellManaUsed()))
 				continue
 		
 		# MAGE USE MEDIUM HEALING
@@ -88,7 +88,7 @@ def Mage_Spells( Player ):
 				Player.useMediumHealing()
 				continue
 			else:
-				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMediumHealingManaUsed()))
+				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMageMediumHealingManaUsed()))
 				continue
 
 		# MAGE USE MEDIUM HEALING
@@ -97,7 +97,7 @@ def Mage_Spells( Player ):
 				Player.useStrongHealing()
 				continue
 			else:
-				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getStrongHealingManaUsed()))
+				print('\n\t Do not have sufficient mana. Need at least {} mana points.\n'.format(Player.getMageStrongHealingManaUsed()))
 		break
 
 
@@ -244,8 +244,11 @@ def Round( Player , Monster ):
 
 			elif Monster.isDead():
 
-				# Player is still alive and monster is dead? True -> next round
+				if Monster.type() == "BOSS":
+					return True
+					break
 
+				# Player is still alive and monster is dead? True -> next round
 				lootMonster = Monster.getMonsterLoot()
 				experienceMonster = Monster.getMonsterExperience()
 

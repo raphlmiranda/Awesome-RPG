@@ -93,6 +93,9 @@ class NormalMonster(LivingBeing):
 		else:
 			return False
 
+	def type(self):
+		return "NORMAL"
+
 	def Attack(self):
 		baseAttackOne = int(self.normalMonsterAttackDamage * 0.5)
 		baseAttackTwo = int(self.normalMonsterAttackDamage * 1.5)

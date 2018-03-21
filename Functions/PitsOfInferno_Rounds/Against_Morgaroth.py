@@ -31,16 +31,34 @@
 from Monsters.BOSS.Morgaroth import Morgaroth
 
 from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_MORGAROTH_LIFE
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_MORGAROTH_NAME
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_MORGAROTH_WEAPON_ATTACK
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_MORGAROTH_MAGIC_ATTACK
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_MORGAROTH_EXPERIENCE
 
 from Functions.RolePlay import *
-from Functions.NPC import NPC
-from Functions.Prints import *
+
 
 def Round_Against_Morgaroth( playerAlive, Player ):
 
-	newMorgaroth = Hunter(GLOBAL_MORGAROTH_LIFE)
+	newMorgaroth = Morgaroth(GLOBAL_MORGAROTH_LIFE,
+		                     GLOBAL_MORGAROTH_NAME,
+		                     GLOBAL_MORGAROTH_MAGIC_ATTACK,
+		                     GLOBAL_MORGAROTH_WEAPON_ATTACK,
+		                     GLOBAL_MORGAROTH_EXPERIENCE)
 
 	while True:
+
+		print('\n\n\t XXXXXXXXXXXXXXXXXXXXX')
+		print('\t .... BOSS FIGHT .... ')
+		print('\t XXXXXXXXXXXXXXXXXXXXX')
+
+		print('\n\n\t ......................')
+		print('\t ......................')
+		print('\t ...HAHAHAHAHAHAHAHAAH!')
+		print('\t ......................')
+		print('\t ......................')
+		print('\t ......I will kill you!')
 
 		playerStillAlive = Round( Player, newMorgaroth )
 

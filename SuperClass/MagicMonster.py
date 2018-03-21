@@ -91,6 +91,9 @@ class MagicMonster(LivingBeing):
 		magicMonsterStrongSpellDamage = randint(5,6) * self.magicMonsterSpellDamage
 		return magicMonsterStrongSpellDamage
 
+	def type(self):
+		return "MAGIC"
+
 	def isDead(self):
 		if self.getLivingBeingCurrentlyLife() <= 0:
 			return True

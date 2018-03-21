@@ -69,6 +69,12 @@ class Character(LivingBeing):
 	def getCharacterCurrentlyMana(self):
 		return self.characterCurrentlyMana
 
+	def getCharacterVocationType(self):
+		if self.characterVocation == 'Knight' or self.characterVocation == 'Paladin':
+			return "WARRIOR"
+		else:
+			return "MAGE"
+
 	def getCharacterName(self):
 		return self.characterName
 
@@ -95,6 +101,9 @@ class Character(LivingBeing):
 
 	def getCharacterCurrentlyGoldCoins(self):
 		return self.characterCurrentlyGoldCoins
+
+	def getCharacterTotalManaUsed(self):
+		return self.characterTotalManaUsed
 
 	def getCharacterVocation(self):
 		return self.characterVocation;

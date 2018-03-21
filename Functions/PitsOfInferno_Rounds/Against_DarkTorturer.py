@@ -6,7 +6,7 @@
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#               Against Hunter Round Function              #
+#             Against DarkTorturer Round Function          #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
@@ -28,16 +28,29 @@
 #               camelCase = local variables, methods, attributes, parameters, arguments
 #               Under_Line = functions
 
-from Monsters.DemonMonster.Fury import Fury
+from Monsters.DemonMonster.DarkTorturer import DarkTorturer
 
 from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_LIFE
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_NAME
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_WEAPON_ATTACK
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_MAGIC_ATTACK
+from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_EXPERIENCE
 
 from Functions.RolePlay import *
 
 def Round_Against_DarkTorturer( playerAlive, Player ):
 
-	newDarkTorturerOne = DarkTorturer(GLOBAL_DARKTORTURER_LIFE)
-	newDarkTorturerTwo = DarkTorturer(GLOBAL_DARKTORTURER_LIFE)
+	newDarkTorturerOne = DarkTorturer(GLOBAL_DARKTORTURER_LIFE,
+									  GLOBAL_DARKTORTURER_NAME,
+									  GLOBAL_DARKTORTURER_MAGIC_ATTACK,
+									  GLOBAL_DARKTORTURER_WEAPON_ATTACK,
+									  GLOBAL_DARKTORTURER_EXPERIENCE)
+
+	newDarkTorturerTwo = DarkTorturer(GLOBAL_DARKTORTURER_LIFE,
+									  GLOBAL_DARKTORTURER_NAME,
+									  GLOBAL_DARKTORTURER_MAGIC_ATTACK,
+									  GLOBAL_DARKTORTURER_WEAPON_ATTACK,
+									  GLOBAL_DARKTORTURER_EXPERIENCE)
 
 	while True:
 

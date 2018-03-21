@@ -33,6 +33,8 @@ from random import randint
 
 from GLOBAL.GLOBAL_CHARACTERS import MAGE_INITIAL_MANA, MAGE_LIGHT_SPELL_MANA_USED
 
+from GLOBAL.GLOBAL_CHARACTERS import MAGE_ADD_LIFE_FOR_LEVEL, MAGE_ADD_MANA_FOR_LEVEL
+
 from GLOBAL.GLOBAL_CHARACTERS import MAGE_REG_LIFE_EACH_TURN, MAGE_REG_MANA_EACH_TURN
 
 from GLOBAL.GLOBAL_CHARACTERS import MAGE_MEDIUM_SPELL_MANA_USED, MAGE_STRONG_SPELL_MANA_USED
@@ -99,6 +101,8 @@ class Mage(Character):
 		self.mageManaUsedToNextMagicLevel = 100
 
 
+	def getMageManaUsedToNextMagicLevel(self):
+		return self.mageManaUsedToNextMagicLevel
 
 	def getMageTotalMana(self):
 		return self.mageTotalMana
@@ -129,12 +133,12 @@ class Mage(Character):
 
 	def Update(self):
 		# update level
-		if( self.getCharacterCurrentlyXP() >= self.getCharacterTotalXPToNextLevel() ):
+		if( self.getCharacterCurrentlyXP() >= self.getCharacterXPToNextLevel() ):
 			self.characterCurrentlyLevel += 1
 			self.characterXPToNextLevel *= 2.5
 			self.livingBeingTotalLife += MAGE_ADD_LIFE_FOR_LEVEL
 			self.mageTotalMana += MAGE_ADD_MANA_FOR_LEVEL
-			print('\t ... PLAYER UPED LEVEL!')
+			print('\n\t ... PLAYER UPED LEVEL!')
 			print('\t Total Life + {} points!'.format(MAGE_ADD_LIFE_FOR_LEVEL))
 			print('\t Total Mana + {} points!'.format(MAGE_ADD_MANA_FOR_LEVEL))
 			print('\t Currently Player Level: {}'.format(self.getCharacterCurrentlyLevel()))
@@ -142,9 +146,12 @@ class Mage(Character):
 		
 
 		# update magic level
-		if( self.getTotalManaUsed() >= self.getTotalManaUsedToNextLevel() ):
-			self.magicLevel += 1
-			self.manaUsedToNextMagicLevel *= 2.5
+		if( self.getCharacterTotalManaUsed() >= self.getMageManaUsedToNextMagicLevel() ):
+			self.characterCurrentlyMagicLevel += 1
+			print('\n\t ...Magic Level UPED!')
+			print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+			self.mageManaUsedToNextMagicLevel *= 2.5
+			print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
 		
 	
 
@@ -161,7 +168,7 @@ class Mage(Character):
 		if( self.getCharacterCurrentlyMana() >= MAGE_LIGHT_SPELL_MANA_USED ):
 
 			print('\t Player says: BAZINGAAA')
-
+		
 			self.characterCurrentlyMana -= MAGE_LIGHT_SPELL_MANA_USED
 			self.characterTotalManaUsed += MAGE_LIGHT_SPELL_MANA_USED
 
@@ -170,6 +177,14 @@ class Mage(Character):
 			mageLightSpellDamage = randint(mageLightSpellDamageOne, mageLightSpellDamageTwo)
 
 			print('\t Spell Damage: {}'.format(mageLightSpellDamage))
+
+			# update magic level
+			if( self.getCharacterTotalManaUsed() >= self.getMageManaUsedToNextMagicLevel() ):
+				self.characterCurrentlyMagicLevel += 1
+				print('\n\t ...Magic Level UPED!')
+				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+				self.mageManaUsedToNextMagicLevel *= 2.5
+				print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageLightSpellDamage 
 		
@@ -188,11 +203,19 @@ class Mage(Character):
 			self.characterCurrentlyMana -= 200
 			self.characterTotalManaUsed += 200
 
-			mageLightSpellDamageOne = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 12
-			mageLightSpellDamageTwo = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 22
-			mageLightSpellDamage = randint(mageLightSpellDamageOne, mageLightSpellDamageTwo)
+			mageMediumSpellDamageOne = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 12
+			mageMediumSpellDamageTwo = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 22
+			mageMediumSpellDamage = randint(mageMediumSpellDamageOne, mageMediumSpellDamageTwo)
 
 			print('\t Spell Damage: {}'.format(mageMediumSpellDamage))
+
+			# update magic level
+			if( self.getCharacterTotalManaUsed() >= self.getMageManaUsedToNextMagicLevel() ):
+				self.characterCurrentlyMagicLevel += 1
+				print('\n\t ...Magic Level UPED!')
+				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+				self.mageManaUsedToNextMagicLevel *= 2.5
+				print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageMediumSpellDamage
 		
@@ -211,11 +234,19 @@ class Mage(Character):
 			self.characterTotalManaUsed += MAGE_STRONG_SPELL_MANA_USED
 
 
-			mageLightSpellDamageOne = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 18
-			mageLightSpellDamageTwo = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 30
-			mageLightSpellDamage = randint(mageLightSpellDamageOne, mageLightSpellDamageTwo)
+			mageStrongSpellDamageOne = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 18
+			mageStrongSpellDamageTwo = self.getCharacterCurrentlyLevel() * self.getCharacterCurrentlyMagicLevel() * 30
+			mageStrongSpellDamage = randint(mageStrongSpellDamageOne, mageStrongSpellDamageTwo)
 
 			print('\t Spell Damage: {}'.format(mageStrongSpellDamage))
+
+			# update magic level
+			if( self.getCharacterTotalManaUsed() >= self.getMageManaUsedToNextMagicLevel() ):
+				self.characterCurrentlyMagicLevel += 1
+				print('\n\t ...Magic Level UPED!')
+				print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
+				self.mageManaUsedToNextMagicLevel *= 2.5
+				print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageStrongSpellDamage
 		

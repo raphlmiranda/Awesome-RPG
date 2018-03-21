@@ -75,7 +75,7 @@ def Pits_Of_Inferno_Start_Game( Player ):
 
 	while playerAlive:
 
-		playerAlive = Round_Against_Fury(  playerAlive, Player )
+		playerAlive = Round_Against_Bear(  playerAlive, Player )
 		
 		if playerAlive: # Alive against bears?
 
@@ -112,6 +112,13 @@ def Pits_Of_Inferno_Start_Game( Player ):
 										if playerAlive: # Alive against Demons? GO BOSS
 
 											playerAlive = Round_Against_Morgaroth( playerAlive, Player )
+
+											if playerAlive:
+
+												print('\n\n\n\t YOU WIN THE GAME!\n\n\n')
+												break
+											else:
+												break
 										else:
 											break
 									else:
@@ -130,5 +137,3 @@ def Pits_Of_Inferno_Start_Game( Player ):
 				break
 		else:
 			break
-
-		print('\t YOU WIN THE GAME!')
