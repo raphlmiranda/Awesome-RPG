@@ -13,12 +13,13 @@
 
 ## Table of Contents
 
-- [How to use the program](#howtouse)
-- [Inspiration](#references)
-- [Reasons](#bestpractices)
-- [References](#ides)
+- [How to use the program](#how-to-use-the-program)
+- [Inspirations](#inspirations)
+- [Reasons](#reasons)
+- [References](#references)
 - [Tools](#tools)
-- [Game Prints](#)
+- [Game Prints](#game-prints)
+- [Copyright and License](#copyright-and-license)
 
 # How to use the program
   
@@ -60,3 +61,6 @@
 ## Game Prints
 
 
+## Copyright and License
+
+Code and documentation copyright 2018 [Alex Galhardo](https://github.com/AlexGalhardo). Code released under the [MIT License](https://github.com/AlexGalhardo/Awesome-RPG/blob/master/LICENSE).
