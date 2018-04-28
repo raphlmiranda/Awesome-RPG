@@ -18,6 +18,7 @@
 - [Reasons](#bestpractices)
 - [References](#ides)
 - [Tools](#tools)
+- [Game Prints](#)
 
 # How to use the program
   
@@ -50,6 +51,6 @@
 - [Bash](https://www.google.com.br/search?q=bash&oq=bash&aqs=chrome..69i57l2j69i65l3j69i60.422j0j7&sourceid=chrome&ie=UTF-8)
 - [Sublime Text](https://www.sublimetext.com/)
 
-
+## Game Prints
 
 
