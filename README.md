@@ -22,7 +22,9 @@
 
 # How to use the program
   
-   
+     git clone https://github.com/AlexGalhardo/Awesome-RPG.git
+     cd Awesome-RPG
+     python3 main.py
 
 ## Inspirations
 
