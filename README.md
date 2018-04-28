@@ -39,6 +39,7 @@
 - Learn Best Practices with Python
 - Refactor the code over the years
 - Learn TDD with Python
+- Increase Productivity with Python
 
 ## References
 
