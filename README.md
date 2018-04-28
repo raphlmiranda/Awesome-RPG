@@ -21,9 +21,9 @@
 ## Inspiration
 
 - [Tibia Online](https://secure.tibia.com/news/?subtopic=latestnews)
-- [Final Fantasy Classics](#)
-- [Game Of Thrones](#)
-- [Star Wars](#)
+- Final Fantasy Classics
+- Game Of Thrones
+- Star Wars
 - <strong> Play for discovery more spoilers haha </strong>
 
 
