@@ -38,6 +38,7 @@
 ## Reasons
 
 - Learn POO with Python
+- Learn How to Document Code in Python
 - Learn Best Practices with Python
 - Refactor the code over the years
 - Learn TDD with Python
