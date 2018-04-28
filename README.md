@@ -32,7 +32,7 @@
 - Final Fantasy Classics
 - Game Of Thrones
 - Star Wars
-- <strong> Play for discovery more spoilers haha </strong>
+- <strong> Play for discovery more spoilers :satisfied: </strong>
 
 
 ## Reasons
