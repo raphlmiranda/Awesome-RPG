@@ -11,14 +11,19 @@
 
 
 
-## Table of contents
+## Table of Contents
 
+- [How to use the program](#howtouse)
 - [Inspiration](#references)
 - [Reasons](#bestpractices)
 - [References](#ides)
 - [Tools](#tools)
 
-## Inspiration
+# How to use the program
+  
+   
+
+## Inspirations
 
 - [Tibia Online](https://secure.tibia.com/news/?subtopic=latestnews)
 - Final Fantasy Classics
