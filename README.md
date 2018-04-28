@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://secure.php.net/">
-    <img src="images/rpg.jpg" alt="" width=256 height=144>
+    <img src="images/rpg.jpg" alt="" width=512 height=256>
   </a>
 
   <p align="center">
