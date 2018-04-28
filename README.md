@@ -43,6 +43,8 @@
 - Refactor the code over the years
 - Learn TDD with Python
 - Increase Productivity with Python
+- Learn How To maintain a Complex System with Python
+- Play in my spare time :video_game:
 
 ## References
 
