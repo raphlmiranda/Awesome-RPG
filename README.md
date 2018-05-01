@@ -1,9 +1,4 @@
 <p align="center">
-    </strong>Awesome RPG</strong>
-    <br>
-  </p>
-
-<p align="center">
   <a href="https://secure.php.net/">
     <img src="images/rpg.jpg" alt="" width=512 height=256>
   </a>
