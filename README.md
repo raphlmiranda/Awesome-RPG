@@ -1,5 +1,5 @@
 <p align="center">
-    <h1></strong>Awesome RPG</strong></h1>
+    </strong>Awesome RPG</strong>
     <br>
   </p>
 
