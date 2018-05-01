@@ -1,4 +1,9 @@
 <p align="center">
+    <h1></strong>Awesome RPG</strong></h1>
+    <br>
+  </p>
+
+<p align="center">
   <a href="https://secure.php.net/">
     <img src="images/rpg.jpg" alt="" width=512 height=256>
   </a>
@@ -41,8 +46,9 @@
 - Learn POO with Python
 - Learn How to Document Code in Python
 - Learn Best Practices with Python
-- Refactor the code over the years
-- Learn TDD with Python
+- Refactor the code over the years, improving the algorithm and adding new features
+- Learn to apply TDD in Python
+- Learn to apply automated testing in Python
 - Increase Productivity with Python
 - Learn How To maintain a Complex System with Python
 - Play in my spare time :video_game:
@@ -60,6 +66,7 @@
 
 ## Game Prints
 
+- In development.
 
 ## Copyright and License
 
