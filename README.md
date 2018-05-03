@@ -29,7 +29,7 @@
 
 ## Inspirations
 
-- [Tibia Online](https://secure.tibia.com/news/?subtopic=latestnews)
+- [Tibia Online](https://secure.tibia.com/news/?subtopic=latestnews)(The best game of all time. Which introduced me to the programming world. :heart:)
 - Final Fantasy Classics
 - Game Of Thrones
 - Star Wars
