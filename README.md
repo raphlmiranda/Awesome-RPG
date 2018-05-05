@@ -51,6 +51,7 @@
 ## References
 
 - [Curso Em Video - Python Course](https://www.cursoemvideo.com/course-cat/python/)
+- [Orlando Saraiva - POO](https://github.com/orlandosaraivajr/ioo)
 - [Ignorancia Zero - Youtube](https://www.youtube.com/channel/UCmjj41YfcaCpZIkU-oqVIIw)
 
 ## Tools
