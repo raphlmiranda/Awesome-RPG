@@ -63,7 +63,9 @@
 <h2 align="center"> Game Prints </h2>
 
 <p align="center">
-  <a href="https://secure.tibia.com/news/?subtopic=latestnews">
+  <p>
+    Alpha Version 0.3.6 - 10/05/2018
+  </p>
     <img src="alpha-version.jpg" alt="" width="1360" height="742">
   </a>
 
