@@ -1,22 +1,25 @@
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                         #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                     Main Function Start                  #
+#             GAME OF THRONES GLOBAL VARIABLES             #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   MIT LICENSE                                            #
+#   Alex Galhardo Vieira   								   #
+#   ICMC USP - 2018                                        #
+#   São Carlos - Brazil									   #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
+
 
 #       Code Patterns
 #
@@ -24,13 +27,3 @@
 # PascalCase = modules and Classes
 # camelCase = local variables, methods, attributes, parameters, arguments
 # Under_Line = functions
-
-
-
-'''
-From module Functions import Start Function
-'''
-from Functions.Start import Start
-
-# Start Awesome RPG :D
-Start()

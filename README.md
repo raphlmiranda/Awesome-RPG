@@ -7,7 +7,6 @@
     A Awesome RPG inspired in Tibia Online, Final Fantasy Classics, Game Of Throne, Star Wars, and other nerd things *-*
     <br>
   </p>
-  
 
 
 
@@ -22,7 +21,7 @@
 - [Copyright and License](#copyright-and-license)
 
 # How to use the program
-  
+
      git clone https://github.com/AlexGalhardo/Awesome-RPG.git
      cd Awesome-RPG
      python3 main.py
