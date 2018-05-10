@@ -16,7 +16,7 @@
 - [Inspirations](#inspirations)
 - [Reasons](#reasons)
 - [References](#references)
-- [Tools](#tools)
+- [Tools Used](#tools-used)
 - [Game Prints](#game-prints)
 - [Copyright and License](#copyright-and-license)
 
@@ -34,17 +34,16 @@
 - Star Wars
 - <strong> Play for discovery more spoilers :satisfied: </strong>
 
-
 ## Reasons
 
 - Learn POO with Python
-- Learn How to Document Code in Python
-- Learn Best Practices with Python
+- Learn how to document code in Python
+- Learn best practices with Python
 - Refactor the code over the years, improving the algorithm and adding new features
 - Learn to apply TDD in Python
 - Learn to apply automated testing in Python
-- Increase Productivity with Python
-- Learn How To maintain a Complex System with Python
+- Increase productivity with Python
+- Learn how to maintain a legacy system with Python
 - Play in my spare time :video_game:
 
 ## References
@@ -53,15 +52,22 @@
 - [Orlando Saraiva - POO](https://github.com/orlandosaraivajr/ioo)
 - [Ignorancia Zero - Youtube](https://www.youtube.com/channel/UCmjj41YfcaCpZIkU-oqVIIw)
 
-## Tools
+## Tools Used
 
 - [Lubuntu](https://lubuntu.net/)
 - [Bash](https://www.google.com.br/search?q=bash&oq=bash&aqs=chrome..69i57l2j69i65l3j69i60.422j0j7&sourceid=chrome&ie=UTF-8)
-- [Sublime Text](https://www.sublimetext.com/)
+- [Atom](https://atom.io/)
+- [PyTest](https://docs.pytest.org/en/latest/)
 
-## Game Prints
 
-- In development.
+<h2 align="center"> Game Prints </h2>
+
+<p align="center">
+  <a href="https://secure.tibia.com/news/?subtopic=latestnews">
+    <img src="alpha-version.jpg" alt="" width="1360" height="742">
+  </a>
+
+
 
 ## Copyright and License
 
