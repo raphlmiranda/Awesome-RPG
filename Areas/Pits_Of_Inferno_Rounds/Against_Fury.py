@@ -1,40 +1,37 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#               Against Fury Round Function                #
+#                  Against Fury Round Function             #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+from Monsters.DemonMonsters.Pits_Of_Inferno.Fury import Fury
 
-from Monsters.DemonMonster.Fury import Fury
-
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_FURY_LIFE
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_FURY_NAME
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_FURY_WEAPON_ATTACK 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_FURY_MAGIC_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_FURY_EXPERIENCE 
+from Global.Global_Pits_Of_Inferno import GLOBAL_FURY_LIFE, \
+										  GLOBAL_FURY_NAME, \
+										  GLOBAL_FURY_WEAPON_ATTACK, \
+										  GLOBAL_FURY_MAGIC_ATTACK, \
+										  GLOBAL_FURY_EXPERIENCE
 
 from Functions.RolePlay import *
 

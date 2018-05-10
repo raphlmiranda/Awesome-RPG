@@ -1,37 +1,42 @@
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                         #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                    Morgaroth Class                       #
+#                     Morgaroth Class                      #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
 from SuperClass.BOSS import BOSS
 
+from Global.Global_Pits_Of_Inferno import GLOBAL_MORGAROTH_LIFE, \
+								   		  GLOBAL_MORGAROTH_NAME, \
+								   		  GLOBAL_MORGAROTH_WEAPON_ATTACK, \
+								   		  GLOBAL_MORGAROTH_MAGIC_ATTACK, \
+								   	      GLOBAL_MORGAROTH_EXPERIENCE
 
 class Morgaroth(BOSS):
 
 	'''
-	~ LiveBeing SuperClass
+	~ LivingBeing SuperClass
 	self.livingBeingtotalLife
 	self.livingBeingCurrentlyLife
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
@@ -55,7 +60,7 @@ class Morgaroth(BOSS):
 
 		# constructor Demon Monster
 		super().__init__( livingBeingLife,
-							"Morgaroth",
-							demonMonsterSpellDamage,
-							demonMonsterAttackDamage,
-							demonMonsterExperienceForKill )
+							GLOBAL_MORGAROTH_NAME,
+							GLOBAL_MORGAROTH_MAGIC_ATTACK,
+							GLOBAL_MORGAROTH_WEAPON_ATTACK,
+							GLOBAL_MORGAROTH_EXPERIENCE )

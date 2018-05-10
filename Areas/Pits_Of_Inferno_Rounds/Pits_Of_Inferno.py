@@ -1,32 +1,29 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#               Pits Of Inferno Function                   #
+#              Pits Of Inferno Gameplay Function           #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
 from Global.Global_Pits_Of_Inferno import *
 

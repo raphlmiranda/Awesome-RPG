@@ -1,40 +1,36 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#             Against DarkTorturer Round Function          #
+#            Against Dark Torturer Round Function          #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+from Monsters.DemonMonsters.Pits_Of_Inferno.DarkTorturer import DarkTorturer
 
-from Monsters.DemonMonster.DarkTorturer import DarkTorturer
-
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_LIFE
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_NAME
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_WEAPON_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_MAGIC_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DARKTORTURER_EXPERIENCE
+from Global.Global_Pits_Of_Inferno import GLOBAL_DARKTORTURER_NAME, \
+										  GLOBAL_DARKTORTURER_WEAPON_ATTACK, \
+										  GLOBAL_DARKTORTURER_MAGIC_ATTACK, \
+										  GLOBAL_DARKTORTURER_EXPERIENCE
 
 from Functions.RolePlay import *
 

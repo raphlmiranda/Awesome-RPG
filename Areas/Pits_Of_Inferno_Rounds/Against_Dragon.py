@@ -1,36 +1,32 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#               Round Against Dragon Function              #
+#                  Against Dragon Round Function           #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
+from Monsters.MagicMonsters.Pits_Of_Inferno.Dragon import Dragon
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
-
-from Monsters.MagicMonster.Dragon import Dragon
-
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DRAGON_LIFE
+from Global.Global_Pits_Of_Inferno import GLOBAL_DRAGON_LIFE
 
 from Functions.RolePlay import *
 from Functions.NPC import NPC

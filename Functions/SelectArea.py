@@ -29,8 +29,8 @@
 from modules.area.file import *
 '''
 from Areas.Pits_Of_Inferno_Rounds.Pits_Of_Inferno import *
-from Areas.Game_Of_Thrones_Rounds.Game_Of_Thrones import *
-from Areas.Star_Wars_Rounds.Star_Wars import *
+#from Areas.Game_Of_Thrones_Rounds.Game_Of_Thrones import *
+#from Areas.Star_Wars_Rounds.Star_Wars import *
 
 def Select_Area():
 
