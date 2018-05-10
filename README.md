@@ -1,11 +1,12 @@
+<h2 align="center"> Awesome RPG </h2>
+
 <p align="center">
-  <h2> Awesome RPG </h2>
   <a href="https://secure.tibia.com/news/?subtopic=latestnews">
     <img src="rpg.jpg" alt="" width=512 height=256>
   </a>
 
   <p align="center">
-    A simple command line but very funny RPG Turn Game inspired in Tibia Online, Final Fantasy Classics and other nerd things.
+    A simple command line but very funny RPG Turn Game. Have Fun. :smile:
     <br>
   </p>
 
