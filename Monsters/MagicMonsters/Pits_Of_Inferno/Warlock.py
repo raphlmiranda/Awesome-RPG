@@ -1,6 +1,6 @@
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                         #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
@@ -11,34 +11,31 @@
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions
 
 
 from SuperClass.MagicMonster import MagicMonster
 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_WARLOCK_NAME
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_WARLOCK_MAGIC_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_WARLOCK_EXPERIENCE
+from Global.Global_Pits_Of_Inferno import GLOBAL_WARLOCK_NAME, \
+									      GLOBAL_WARLOCK_MAGIC_ATTACK, \
+										  GLOBAL_WARLOCK_EXPERIENCE
 
 class Warlock(MagicMonster):
 
 	'''
-	--> LiveBeing Interface
+	~ LivingBeing SuperClass
 	self.livingBeingtotalLife
 	self.livingBeingCurrentlyLife
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
@@ -46,7 +43,7 @@ class Warlock(MagicMonster):
 	'''
 
 	'''
-	--> Magic Monster Interface
+	~ Magic Monster SuperClass
 	self.magicMonsterSpellDamage = magicMonsterSpellDamage
 	self.magicMonsterName = magicMonsterName
 	self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
@@ -56,7 +53,7 @@ class Warlock(MagicMonster):
 	def __init__(self,
 				 livingBeingLife):
 
-		# construct MagicMonster
+		# constructor Magic Monster
 		super().__init__( livingBeingLife,
 							GLOBAL_WARLOCK_NAME,
 							GLOBAL_WARLOCK_MAGIC_ATTACK,

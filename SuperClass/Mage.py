@@ -1,73 +1,66 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                 Abstract Class Mage                      #
+#                     Mage SuperClass                      #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions and Modules
 
 from SuperClass.Character import Character
 from random import randint
 
-from GLOBAL.GLOBAL_CHARACTERS import MAGE_INITIAL_MANA, MAGE_LIGHT_SPELL_MANA_USED
+from Global.Global_Characters import MAGE_INITIAL_MANA, \
+									 MAGE_LIGHT_SPELL_MANA_USED, \
+									 MAGE_ADD_LIFE_FOR_LEVEL, \
+									 MAGE_ADD_MANA_FOR_LEVEL, \
+									 MAGE_REG_LIFE_EACH_TURN, \
+									 MAGE_REG_MANA_EACH_TURN, \
+									 MAGE_MEDIUM_SPELL_MANA_USED, \
+									 MAGE_STRONG_SPELL_MANA_USED, \
+									 MAGE_STRONG_HEALING_MANA_USED, \
+									 MAGE_MEDIUM_HEALING_MANA_USED
 
-from GLOBAL.GLOBAL_CHARACTERS import MAGE_ADD_LIFE_FOR_LEVEL, MAGE_ADD_MANA_FOR_LEVEL
-
-from GLOBAL.GLOBAL_CHARACTERS import MAGE_REG_LIFE_EACH_TURN, MAGE_REG_MANA_EACH_TURN
-
-from GLOBAL.GLOBAL_CHARACTERS import MAGE_MEDIUM_SPELL_MANA_USED, MAGE_STRONG_SPELL_MANA_USED
-
-from GLOBAL.GLOBAL_CHARACTERS import MAGE_STRONG_HEALING_MANA_USED, MAGE_MEDIUM_HEALING_MANA_USED
 
 class Mage(Character):
 
 	'''
-	--> LivingBeing Interface
+	~ LivingBeing SuperClass
 	self.totalLife
 	self.currentlyLife
-	
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
 	def getLiveBeingTotalLife():int
 	'''
 
-
 	'''
-	--> Character Interface
+	~ Character SuperClass
 	self.characterName
 	self.characterVocation
-
 	self.currentlyLevel
 	self.currentlyXP
 	self.xpToNextLevel
-
 	self.totalMana
 	self.currentlyMana
-
 	self.totalCapacity
 	self.currentlyCapacity
-
 	self.magicLevel
 	self.manaUsedToNextMagicLevel
 	self.totalManaUsed
@@ -88,7 +81,7 @@ class Mage(Character):
 				 characterName,
 				 characterVocation ):
 
-		# character construct
+		# character constructor
 		super().__init__( livingBeingLife,
 						  characterName,
 			              characterVocation)
@@ -143,7 +136,7 @@ class Mage(Character):
 			print('\t Total Mana + {} points!'.format(MAGE_ADD_MANA_FOR_LEVEL))
 			print('\t Currently Player Level: {}'.format(self.getCharacterCurrentlyLevel()))
 			print('\t Experince to next level: {}'.format(self.getCharacterXPToNextLevel()))
-		
+
 
 		# update magic level
 		if( self.getCharacterTotalManaUsed() >= self.getMageManaUsedToNextMagicLevel() ):
@@ -152,23 +145,23 @@ class Mage(Character):
 			print('\t Currently Magic Level: {}'.format(self.getCharacterCurrentlyMagicLevel()))
 			self.mageManaUsedToNextMagicLevel *= 2.5
 			print('\t Mana to Use to next Magic Level: {}'.format(self.getMageManaUsedToNextMagicLevel()))
-		
-	
+
+
 
 	def getNormalAttack(self):
 		print('\t Player attacked the monster.')
 		normalAttackDamage = randint(20, 40)
 		print('\t Normal attack damage: {}'.format(normalAttackDamage))
 		return normalAttackDamage
-	
 
-	# interface Spells -> weak spell 
+
+	# interface Spells -> weak spell
 	def useLightSpell(self):
 
 		if( self.getCharacterCurrentlyMana() >= MAGE_LIGHT_SPELL_MANA_USED ):
 
 			print('\t Player says: BAZINGAAA')
-		
+
 			self.characterCurrentlyMana -= MAGE_LIGHT_SPELL_MANA_USED
 			self.characterTotalManaUsed += MAGE_LIGHT_SPELL_MANA_USED
 
@@ -186,14 +179,14 @@ class Mage(Character):
 				self.mageManaUsedToNextMagicLevel *= 2.5
 				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
-			return mageLightSpellDamage 
-		
+			return mageLightSpellDamage
+
 		else:
 			print("No have sufficient mana. Need at least 100 mana for used weak spell")
-		
-	
 
-	# interface Spells -> medium spell 
+
+
+	# interface Spells -> medium spell
 	def useMediumSpell(self):
 
 		if( self.getCharacterCurrentlyMana() >= 200 ):
@@ -218,12 +211,12 @@ class Mage(Character):
 				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageMediumSpellDamage
-		
+
 		else:
 			print("No have sufficient mana. Need at least 100 mana for used weak spell")
-		
-	
-	# interface Spells -> strong spell 
+
+
+	# interface Spells -> strong spell
 	def useStrongSpell(self):
 
 		if( self.getCharacterCurrentlyMana() >= MAGE_STRONG_SPELL_MANA_USED ):
@@ -249,7 +242,7 @@ class Mage(Character):
 				print('\t Mana to Use to next Magic Level: {}\n'.format(self.getMageManaUsedToNextMagicLevel()))
 
 			return mageStrongSpellDamage
-		
+
 		else:
 			print("No have sufficient mana. Need at least 100 mana for used weak spell")
 
@@ -270,6 +263,3 @@ class Mage(Character):
 		if self.getCharacterCurrentlyMana() > self.getMageTotalMana():
 			print('\t Mana is full.')
 			self.characterCurrentlyMana = self.mageTotalMana
-
-		
-	

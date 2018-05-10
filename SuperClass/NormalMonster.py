@@ -31,11 +31,11 @@
 from SuperClass.LivingBeing import LivingBeing
 from random import randint
 
-# abstract class that knights, paladins, druids and sorcerer must inherit 
+# abstract class that knights, paladins, druids and sorcerer must inherit
 class NormalMonster(LivingBeing):
 
 	'''
-	--> LiveBeing Interface
+	~ LivingBeing SuperClass
 	self.totalLife
 	self.currentlyLife
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
@@ -43,8 +43,8 @@ class NormalMonster(LivingBeing):
 	'''
 
 	def __init__(self,
-					livingBeingLife, 
-					normalMonsterName, 
+					livingBeingLife,
+					normalMonsterName,
 		    		normalMonsterAttackDamage,
 				 	normalMonsterExperienceForKill):
 
@@ -58,35 +58,35 @@ class NormalMonster(LivingBeing):
 
 	def setNormalMonsterName(self,  normalMonsterName ):
 		self.normalMonsterName = normalMonsterName
-	
-	
+
+
 	def getNormalMonsterName(self):
 		return self.normalMonsterName;
-	
+
 
 	def setNormalMonsterExperienceForKill(self,  normalMonsterExperienceForKill ):
 		self.normalMonsterExperienceForKill = normalMonsterExperienceForKill
-	
+
 
 	def getNormalMonsterExperienceForKill(self):
 		return self.normalMonsterExperienceForKill
-	
+
 
 	def setNormalMonsterAttackDamage(self, normalMonsterAttackDamage ):
 		self.normalMonsterAttackDamage = normalMonsterAttackDamage
-	
+
 
 	def normalMonsterAttack(self):
 		return randint(1, 2) * self.normalMonsterAttackDamage
-	
+
 
 	def getMonsterRoundStatus(self):
 		print('\n\t --- MONSTER STATUS ---')
 		print('\t ' + self.getNormalMonsterName() + ' Life: {}'.format(self.getLivingBeingCurrentlyLife()))
-	
+
 	def takeDamage(self, getDamage):
 		self.livingBeingCurrentlyLife -= getDamage
-		
+
 	def isDead(self):
 		if self.getLivingBeingCurrentlyLife() <= 0:
 			return True

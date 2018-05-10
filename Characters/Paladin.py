@@ -1,66 +1,61 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                 Class Paladin                            #
-#                                                          #
-#   aleexgvieira@gmail.com                                 #
+#                     Paladin Class                        #
+#														   #
+#   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
-#   Alex Galhardo Vieira 								   #
-#   ICMC USP - 2018                                        #
+#	aleexgvieira@gmail.com 								   #
+#   MIT LICENSE                                            #
+#														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
 from SuperClass.Character import Character
 from SuperClass.Warrior import Warrior
 from random import randint
 
-from GLOBAL.GLOBAL_CHARACTERS import PALADIN_ADD_LIFE_FOR_LEVEL
-from GLOBAL.GLOBAL_CHARACTERS import PALADIN_ADD_MANA_FOR_LEVEL
-from GLOBAL.GLOBAL_CHARACTERS import PALADIN_REG_LIFE_EACH_TURN
-from GLOBAL.GLOBAL_CHARACTERS import PALADIN_REG_MANA_EACH_TURN
+from Global.Global_Characters import PALADIN_ADD_LIFE_FOR_LEVEL, \
+									 PALADIN_ADD_MANA_FOR_LEVEL, \
+									 PALADIN_REG_LIFE_EACH_TURN, \
+									 PALADIN_REG_MANA_EACH_TURN
 
 
 class Paladin(Warrior):
 
 	'''
-	--> LivingBeing Interface
+	~ LivingBeing SuperClass
 	self.totalLife
 	self.currentlyLife
-
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
 	deffunction getLiveBeingTotalLife()
 	'''
 
 	'''
-	--> Character Interface
+	~ Character SuperClass
 	self.characterName
 	self.characterVocation
-
 	self.currentlyLevel
 	self.currentlyXP
 	self.xpToNextLevel
-
 	self.totalMana
 	self.currentlyMana
-
 	self.totalCapacity
 	self.currentlyCapacity
-
 	self.magicLevel
 	self.manaUsedToNextMagicLevel
 	self.totalManaUsed
@@ -77,7 +72,7 @@ class Paladin(Warrior):
 	'''
 
 	'''
-	--> Warrior Interface
+	~ Warrior SuperCassl
 	self.warriorWeaponAttack
 	self.warriorWeaponSkillLevel
 	self.warriorTotalAttacks
@@ -92,14 +87,14 @@ class Paladin(Warrior):
 	def __init__(self,
 				 livingBeingLife,
 				 characterName,
-				 characterVocation, 
+				 characterVocation,
 				 warriorWeaponAttack):
 
-		# construct warrior
+		# constructor warrior
 		super().__init__( livingBeingLife,
-			              characterName, 
-						  characterVocation, 
-						  warriorWeaponAttack ) 
+			              characterName,
+						  characterVocation,
+						  warriorWeaponAttack )
 
 		self.paladinTotalMana = 100
 
@@ -108,7 +103,7 @@ class Paladin(Warrior):
 		self.characterCurrentlyMana = 100
 
 		self.paladinManaUsedToNextMagicLevel = 500
-		
+
 
 	def getPaladinTotalMana(self):
 		return self.paladinTotalMana

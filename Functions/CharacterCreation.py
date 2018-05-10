@@ -1,44 +1,40 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                 Characters Creation Function             #
+#                 Character Creation Functions             #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions
 
 from Characters.Knight import Knight
 from Characters.Druid import Druid
 from Characters.Paladin import Paladin
 from Characters.Sorcerer import Sorcerer
 
-from GLOBAL.GLOBAL_CHARACTERS import *
+from Global.Global_Characters import *
 
 def Character_Name():
 	characterName = str(input('\n\n\t Enter your character name: '))
 	return characterName
-
 
 
 def Choose_Vocation():
@@ -123,9 +119,9 @@ def Character_Object( characterName, vocationOption ):
 
 		warriorWeaponAttack = Choose_Knight_Weapon()
 
-		Character = Knight( KNIGHT_INITIAL_LIFE, 
-			                characterName, 
-			                "WARRIOR", 
+		Character = Knight( KNIGHT_INITIAL_LIFE,
+			                characterName,
+			                "WARRIOR",
 			                warriorWeaponAttack )
 
 	elif vocationOption == 2:
@@ -133,20 +129,20 @@ def Character_Object( characterName, vocationOption ):
 		warriorWeaponAttack = Choose_Paladin_Weapon()
 
 		Character = Paladin( PALADIN_INITIAL_LIFE,
-			                 characterName, 
-			                 "WARRIOR", 
+			                 characterName,
+			                 "WARRIOR",
 			                 warriorWeaponAttack )
 
 	elif vocationOption == 3:
 
-		Character = Druid( MAGE_INITIAL_LIFE, 
-			               characterName, 
+		Character = Druid( MAGE_INITIAL_LIFE,
+			               characterName,
 			               "Dumbledore" )
 
 	else:
 
-		Character = Sorcerer( MAGE_INITIAL_LIFE, 
-			                  characterName, 
+		Character = Sorcerer( MAGE_INITIAL_LIFE,
+			                  characterName,
 			                  "Gandalf")
 
 

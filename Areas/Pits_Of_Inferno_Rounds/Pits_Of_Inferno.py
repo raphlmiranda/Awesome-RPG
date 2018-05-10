@@ -28,36 +28,36 @@
 #               camelCase = local variables, methods, attributes, parameters, arguments
 #               Under_Line = functions
 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import *
+from Global.Global_Pits_Of_Inferno import *
 
-from Monsters.NormalMonster.Bear import Bear
-from Monsters.NormalMonster.Hunter import Hunter
-from Monsters.NormalMonster.Cyclops import Cyclops
+from Monsters.NormalMonsters.Pits_Of_Inferno.Bear import Bear
+from Monsters.NormalMonsters.Pits_Of_Inferno.Hunter import Hunter
+from Monsters.NormalMonsters.Pits_Of_Inferno.Cyclops import Cyclops
 
-from Monsters.MagicMonster.Dragon import Dragon
-from Monsters.MagicMonster.Infernalist import Infernalist
-from Monsters.MagicMonster.Warlock import Warlock
+from Monsters.MagicMonsters.Pits_Of_Inferno.Dragon import Dragon
+from Monsters.MagicMonsters.Pits_Of_Inferno.Infernalist import Infernalist
+from Monsters.MagicMonsters.Pits_Of_Inferno.Warlock import Warlock
 
-from Monsters.DemonMonster.Fury import Fury
-from Monsters.DemonMonster.DarkTorturer import DarkTorturer
-from Monsters.DemonMonster.Demon import Demon
+from Monsters.DemonMonsters.Pits_Of_Inferno.Fury import Fury
+from Monsters.DemonMonsters.Pits_Of_Inferno.DarkTorturer import DarkTorturer
+from Monsters.DemonMonsters.Pits_Of_Inferno.Demon import Demon
 
-from Monsters.BOSS.Morgaroth import Morgaroth 
+from Monsters.Bosses.Morgaroth import Morgaroth
 
 from Functions.NPC import NPC
 from Functions.Prints import *
 from Functions.RolePlay import *
 
-from Functions.PitsOfInferno_Rounds.Against_Bear import *
-from Functions.PitsOfInferno_Rounds.Against_Hunter import *
-from Functions.PitsOfInferno_Rounds.Against_Cyclops import *
-from Functions.PitsOfInferno_Rounds.Against_Dragon import *
-from Functions.PitsOfInferno_Rounds.Against_Infernalist import *
-from Functions.PitsOfInferno_Rounds.Against_Warlock import *
-from Functions.PitsOfInferno_Rounds.Against_Fury import *
-from Functions.PitsOfInferno_Rounds.Against_DarkTorturer import *
-from Functions.PitsOfInferno_Rounds.Against_Demon import *
-from Functions.PitsOfInferno_Rounds.Against_Morgaroth import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Bear import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Hunter import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Cyclops import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Dragon import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Infernalist import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Warlock import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Fury import *
+from Areas.Pits_Of_Inferno_Rounds.Against_DarkTorturer import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Demon import *
+from Areas.Pits_Of_Inferno_Rounds.Against_Morgaroth import *
 
 
 def After_Fight( Player ):
@@ -76,7 +76,7 @@ def Pits_Of_Inferno_Start_Game( Player ):
 	while playerAlive:
 
 		playerAlive = Round_Against_Bear(  playerAlive, Player )
-		
+
 		if playerAlive: # Alive against bears?
 
 			playerAlive = Round_Against_Hunter( playerAlive, Player )
@@ -100,15 +100,15 @@ def Pits_Of_Inferno_Start_Game( Player ):
 							if playerAlive: # Alive against Warlocks?
 
 								playerAlive = Round_Against_Fury( playerAlive, Player )
-							
+
 								if playerAlive: # Alive against Furys?
 
 									playerAlive = Round_Against_DarkTorturer( playerAlive, Player )
-								
+
 									if playerAlive: # Alive against DarkTorturers?
 
 										playerAlive = Round_Against_Demon( playerAlive, Player )
-									
+
 										if playerAlive: # Alive against Demons? GO BOSS
 
 											playerAlive = Round_Against_Morgaroth( playerAlive, Player )

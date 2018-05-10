@@ -8,35 +8,35 @@
 #                                                          #
 #                     Hunter Class                         #
 #														   #
-#														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
 
 
 from SuperClass.NormalMonster import NormalMonster
 
+from Global.Global_Pits_Of_Inferno import GLOBAL_HUNTER_NAME, \
+										  GLOBAL_HUNTER_WEAPON_ATTACK, \
+										  GLOBAL_HUNTER_EXPERIENCE
+
 class Hunter(NormalMonster):
 
 	'''
-	--> LiveBeing Interface
+	~ LiveBeing SuperClass
 	self.livingBeingtotalLife
 	self.livingBeingCurrentlyLife
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
@@ -44,7 +44,7 @@ class Hunter(NormalMonster):
 	'''
 
 	'''
-	--> Normal Monster Interface
+	~ Normal Monster SuperClass
 	self.magicMonsterSpellDamage = magicMonsterSpellDamage
 	self.magicMonsterName = magicMonsterName
 	self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
@@ -54,8 +54,8 @@ class Hunter(NormalMonster):
 	def __init__(self,
 				 livingBeingLife):
 
-		# construct MagicMonster
+		# constructor Normal Monster
 		super().__init__( livingBeingLife,
-							"Hunter",
-							20,
-							500 )
+							GLOBAL_HUNTER_NAME,
+							GLOBAL_HUNTER_WEAPON_ATTACK,
+							GLOBAL_HUNTER_EXPERIENCE )

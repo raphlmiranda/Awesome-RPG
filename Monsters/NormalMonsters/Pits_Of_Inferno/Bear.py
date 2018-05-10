@@ -1,42 +1,41 @@
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                         #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                    Dragon Class                          #
+#                    Bear Class                            #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
-
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
 
+from SuperClass.NormalMonster import NormalMonster
 
-from SuperClass.MagicMonster import MagicMonster
+from Global.Global_Pits_Of_Inferno import GLOBAL_BEAR_NAME, \
+										  GLOBAL_BEAR_WEAPON_ATTACK, \
+										  GLOBAL_BEAR_EXPERIENCE
 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DRAGON_NAME
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DRAGON_MAGIC_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DRAGON_EXPERIENCE
-
-class Dragon(MagicMonster):
+class Bear(NormalMonster):
 
 	'''
-	--> LiveBeing Interface
+	~ LivingBeing SuperClass
 	self.livingBeingtotalLife
 	self.livingBeingCurrentlyLife
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
@@ -44,7 +43,7 @@ class Dragon(MagicMonster):
 	'''
 
 	'''
-	--> Magic Monster Interface
+	~  Normal Monster SuperClass
 	self.magicMonsterSpellDamage = magicMonsterSpellDamage
 	self.magicMonsterName = magicMonsterName
 	self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
@@ -54,8 +53,8 @@ class Dragon(MagicMonster):
 	def __init__(self,
 				 livingBeingLife):
 
-		# construct MagicMonster
+		# constructor Normal Monster
 		super().__init__( livingBeingLife,
-							GLOBAL_DRAGON_NAME,
-							GLOBAL_DRAGON_MAGIC_ATTACK,
-							GLOBAL_DRAGON_EXPERIENCE )
+							GLOBAL_BEAR_NAME,
+							GLOBAL_BEAR_WEAPON_ATTACK,
+							GLOBAL_BEAR_EXPERIENCE )

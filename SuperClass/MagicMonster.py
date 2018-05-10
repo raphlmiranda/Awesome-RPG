@@ -1,39 +1,35 @@
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   ##                                                          #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                  Abstract Class Magic Monster            #
-#														   #
+#                    Magic Monster SuperClass              #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = Functions and Modules
 
 
 from SuperClass.LivingBeing import LivingBeing
 from random import randint
 
-# abstract class that knights, paladins, druids and sorcerer must inherit 
+# abstract class that knights, paladins, druids and sorcerer must inherit
 class MagicMonster(LivingBeing):
 
 	'''
@@ -57,31 +53,31 @@ class MagicMonster(LivingBeing):
 		self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
 		self.magicMonsterLoot = randint(250, 700)
 
-	
+
 	def setMagicMonsterName(self,  magicMonsterName ):
 		self.magicMonsterName = magicMonsterName
-	
+
 
 	def getMagicMonsterName(self):
 		return self.magicMonsterName
-	
+
 
 	def setMagicMonsterExperienceForKill(self,  magicMonsterExperienceForKill ):
 		self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
-	
+
 
 	def getMagicMonsterExperienceForKill(self):
 		return self.magicMonsterExperienceForKill
-	
+
 
 	def setMagicMonsterSpellDamage(self, magicMonsterSpellDamage ):
 		self.magicMonsterSpellDamage = magicMonsterSpellDamage;
-	
+
 
 	def magicMonsterLightSpell(self):
 		magicMonsterLightSpellDamage = randint(1, 2) * self.magicMonsterSpellDamage
 		return magicMonsterLightSpellDamage
-	
+
 
 	def magicMonsterMediumSpell(self):
 		magicMonsterMediumSpellDamage = randint(3, 4) * self.magicMonsterSpellDamage
@@ -130,7 +126,7 @@ class MagicMonster(LivingBeing):
 	def getMonsterRoundStatus(self):
 		print('\n\t --- MONSTER STATUS ---')
 		print('\t ' + self.getMagicMonsterName() + ' Life: {}'.format(self.getLivingBeingCurrentlyLife()))
-	
+
 	def takeDamage(self, getDamage):
 		self.livingBeingCurrentlyLife -= getDamage
 

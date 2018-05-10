@@ -1,12 +1,12 @@
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                        #
+#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                   Bear Class                             #
+#               Against Hunter Round Function              #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
@@ -28,37 +28,44 @@
 #               camelCase = local variables, methods, attributes, parameters, arguments
 #               Under_Line = functions
 
+from Monsters.NormalMonsters.Pits_Of_Inferno.Hunter import Hunter
 
-from SuperClass.NormalMonster import NormalMonster
+from Global.Global_Pits_Of_Inferno import GLOBAL_HUNTER_LIFE
 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_BEAR_NAME
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_BEAR_WEAPON_ATTACK 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_BEAR_EXPERIENCE
+from Functions.RolePlay import *
 
-class Bear(NormalMonster):
+def Round_Against_Hunter( playerAlive, Player ):
 
-	'''
-	--> LiveBeing Interface
-	self.livingBeingtotalLife
-	self.livingBeingCurrentlyLife
-	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
-	def getLiveBeingTotalLife():int
-	'''
+	newHunterOne = Hunter(GLOBAL_HUNTER_LIFE)
+	newHunterTwo = Hunter(GLOBAL_HUNTER_LIFE)
 
-	'''
-	--> Normal Monster Interface
-	self.magicMonsterSpellDamage = magicMonsterSpellDamage
-	self.magicMonsterName = magicMonsterName
-	self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
-	self.lootGoldCoins = randint(100, 500)
-	'''
+	while True:
 
-	def __init__(self,
-				 livingBeingLife):
+		playerStillAlive = Round( Player, newHunterOne )
 
-		# construct MagicMonster
-		super().__init__( livingBeingLife,
-							GLOBAL_BEAR_NAME,
-							GLOBAL_BEAR_WEAPON_ATTACK,
-							GLOBAL_BEAR_EXPERIENCE )
+		if playerStillAlive:
+			break
+		else:
+			print('\n\n\t ... YOU ARE DEAD...')
+			print('\n\n\t ... GAME OVER ...\n\n')
+			playerAlive = False
+			return playerAlive
+			break
 
+	After_Fight( Player )
+
+	while True:
+
+		playerStillAlive = Round( Player, newHunterTwo )
+
+		if playerStillAlive:
+			break
+		else:
+			print('\n\n\t ... YOU ARE DEAD...')
+			print('\n\n\t ... GAME OVER ...\n\n')
+			playerAlive = False
+			return playerAlive
+			break
+
+	After_Fight( Player )
+	return True

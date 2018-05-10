@@ -1,54 +1,56 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                 Characters Creation Function             #
-#                                                          #
-#   aleexgvieira@gmail.com                                 #
+#                    Knight Class                          #
+#														   #
+#   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
-#   Alex Galhardo Vieira                                   #
+#	aleexgvieira@gmail.com 								   #
+#   MIT LICENSE                                            #
+#														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions
 
 from SuperClass.Character import Character
 from SuperClass.Warrior import Warrior
 from random import randint
 
-from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_INITIAL_MANA
-from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_ADD_MANA_FOR_LEVEL, KNIGHT_ADD_LIFE_FOR_LEVEL
-from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_REG_LIFE_EACH_TURN, KNIGHT_REG_MANA_EACH_TURN
+from Global.Global_Characters import KNIGHT_INITIAL_MANA, \
+									 KNIGHT_ADD_MANA_FOR_LEVEL, \
+									 KNIGHT_ADD_LIFE_FOR_LEVEL, \
+									 KNIGHT_REG_LIFE_EACH_TURN, \
+									 KNIGHT_REG_MANA_EACH_TURN
 
-from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_LIGHT_SPELL_MANA_USED
-from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_MEDIUM_SPELL_MANA_USED
-from GLOBAL.GLOBAL_CHARACTERS import KNIGHT_STRONG_SPELL_MANA_USED
+from Global.Global_Characters import KNIGHT_LIGHT_SPELL_MANA_USED, \
+									 KNIGHT_MEDIUM_SPELL_MANA_USED, \
+									 KNIGHT_STRONG_SPELL_MANA_USED
+
 
 class Knight(Warrior):
-
 	'''
-	--> LivingBeing Interface
+	~ LiveBeing SuperClass
 	self.totalLife
 	self.currentlyLife
-
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
 	deffunction getLiveBeingTotalLife()
 	'''
 
 	'''
-	--> Character Interface
+	~ Character SuperClass
 	self.characterName
 	self.characterVocation
 
@@ -90,17 +92,17 @@ class Knight(Warrior):
 	def getWarriorWeaponSkillLevel(self)
 	'''
 
-	def __init__(self, 
+	def __init__(self,
 				 livingBeingLife,
 				 characterName,
-				 characterVocation, 
+				 characterVocation,
 				 warriorWeaponAttack):
 
-		# construct warrior
+		# constructor warrior superclass
 		super().__init__( livingBeingLife,
-			              characterName, 
-						  characterVocation, 
-						  warriorWeaponAttack ) 
+			              characterName,
+						  characterVocation,
+						  warriorWeaponAttack )
 
 		self.knightTotalMana = 100
 
@@ -254,5 +256,3 @@ class Knight(Warrior):
 			print('\t Weapon Skill Level: {}'.format(self.getWarriorWeaponSkillLevel()))
 			self.warriorTotalAttacksToNextWeaponSkillLevel *= 2
 			print('\t Total Hits to next Level: {}'.format(self.getWarriorTotalAttacksToNextWeaponSkillLevel()))
-
-	

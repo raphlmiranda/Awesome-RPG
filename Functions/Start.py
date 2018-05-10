@@ -1,39 +1,35 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
-#                       								   #
-#				 Start Function                            #
 #                                                          #
+#                    Start Function                        #
+#														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
+#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
-
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions
 
 from Functions.Prints import *
-from Functions.NPC import NPC
+from Functions.CharacterCreation import *
 from Functions.RolePlay import *
 from Functions.SelectArea import *
-from Functions.PitsOfInferno_Rounds.PitsOfInferno import *
-from Functions.CharacterCreation import *
+from Functions.NPC import *
 
 def Start():
 
@@ -44,7 +40,7 @@ def Start():
 		Introductions_Print()
 
 		characterName = Character_Name()
-		
+
 		vocationOption = Choose_Vocation()
 
 		CharacterObject = Character_Object( characterName, vocationOption )
@@ -64,4 +60,3 @@ def Start():
 			break
 
 	print('\n\n\t Bye Bye. Come Back Later! :D\n\n')
-	

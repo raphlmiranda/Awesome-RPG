@@ -28,9 +28,15 @@
 #               camelCase = local variables, methods, attributes, parameters, arguments
 #               Under_Line = functions
 
-from Monsters.NormalMonster.Bear import Bear
+'''
+from Root Folder Monsters -> Folder Normal Monster -> Area Pits of Inferno -> File Bear -> import Class Bear
+'''
+from Monsters.NormalMonsters.Pits_Of_Inferno.Bear import Bear
 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_BEAR_LIFE
+'''
+Import Bear Life Global Variable
+'''
+from Global.Global_Pits_Of_Inferno import GLOBAL_BEAR_LIFE
 
 from Functions.RolePlay import *
 from Functions.NPC import NPC
@@ -41,9 +47,14 @@ def Round_Against_Bear( playerAlive, Player ):
 	newBearOne = Bear(GLOBAL_BEAR_LIFE)
 	newBearTwo = Bear(GLOBAL_BEAR_LIFE)
 
-	while True:
+	bears = []
+	bears.push(newBearOne)
+	bears.push(newBearTwo)
 
-		playerStillAlive = Round( Player, newBearOne )
+	rounds = 2
+	while rounds:
+
+		playerStillAlive = Round( Player, bears.pop() )
 
 		if playerStillAlive:
 			break
@@ -54,8 +65,9 @@ def Round_Against_Bear( playerAlive, Player ):
 			return playerAlive
 			break
 
-	After_Fight( Player )
-
+		After_Fight( Player )
+		rounds -= 1
+	'''
 	while True:
 
 		playerStillAlive = Round( Player, newBearTwo )
@@ -71,3 +83,4 @@ def Round_Against_Bear( playerAlive, Player ):
 
 	After_Fight( Player )
 	return True
+	'''

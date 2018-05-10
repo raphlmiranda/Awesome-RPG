@@ -30,15 +30,15 @@
 
 from SuperClass.DemonMonster import DemonMonster
 
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DEMON_NAME
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DEMON_MAGIC_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DEMON_WEAPON_ATTACK
-from GLOBAL.GLOBAL_PITS_OF_INFERNO import GLOBAL_DEMON_EXPERIENCE
+from Global.Global_Pits_Of_Inferno import GLOBAL_DEMON_NAME, \
+										  GLOBAL_DEMON_MAGIC_ATTACK, \
+										  GLOBAL_DEMON_WEAPON_ATTACK, \
+										  GLOBAL_DEMON_EXPERIENCE
 
 class Demon(DemonMonster):
 
 	'''
-	--> LiveBeing Interface
+	~ LivingBeing SuperClass
 	self.livingBeingtotalLife
 	self.livingBeingCurrentlyLife
 	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
@@ -46,7 +46,7 @@ class Demon(DemonMonster):
 	'''
 
 	'''
-	--> Magic Monster Interface
+	~ Demon Monster SuperClass
 	self.magicMonsterSpellDamage = magicMonsterSpellDamage
 	self.magicMonsterName = magicMonsterName
 	self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
@@ -64,5 +64,5 @@ class Demon(DemonMonster):
 		super().__init__( livingBeingLife,
 							GLOBAL_DEMON_NAME,
 							GLOBAL_DEMON_MAGIC_ATTACK,
-							GLOBAL_DEMON_WEAPON_ATTACK, 
-							GLOBAL_DEMON_EXPERIENCE ) 
+							GLOBAL_DEMON_WEAPON_ATTACK,
+							GLOBAL_DEMON_EXPERIENCE )

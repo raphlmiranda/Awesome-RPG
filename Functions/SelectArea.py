@@ -1,33 +1,36 @@
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
 #                                                          #
 #                       ALPHA                              #
 #                                                          #
 #                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                Select Area Functions                     #
-#                                                          #
-#   aleexgvieira@gmail.com                                 #
+#                     Select Area Function                 #
+#														   #
+#   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
-#   Alex Galhardo Vieira                                   #
+#	aleexgvieira@gmail.com 								   #
+#   MIT LICENSE                                            #
+#														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+#       Code Patterns
+#
+# UPPERCASE = global variables
+# PascalCase = Classes
+# camelCase = local variables, methods, attributes, parameters, arguments
+# Under_Line = functions
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
-
-
-from Functions.PitsOfInferno_Rounds.PitsOfInferno import *
-from Functions.GameOfThrones_Rounds.GameOfThrones import *
-from Functions.StarWars_Rounds.StarWars import *
+'''
+from modules.area.file import *
+'''
+from Areas.Pits_Of_Inferno_Rounds.Pits_Of_Inferno import *
+from Areas.Game_Of_Thrones_Rounds.Game_Of_Thrones import *
+from Areas.Star_Wars_Rounds.Star_Wars import *
 
 def Select_Area():
 
