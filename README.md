@@ -1,4 +1,5 @@
 <p align="center">
+  <h2> Awesome RPG </h2>
   <a href="https://secure.tibia.com/news/?subtopic=latestnews">
     <img src="rpg.jpg" alt="" width=512 height=256>
   </a>
@@ -66,7 +67,7 @@
   <p>
     Alpha Version 0.3.6 - 10/05/2018
   </p>
-    <img src="alpha-version.jpg" alt="" width="1360" height="742">
+    <img src="alpha-version.jpg" alt="" width="1360" height="500">
   </a>
 
 
