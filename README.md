@@ -48,6 +48,41 @@
 - Learn how to maintain a legacy system with Python
 - Play in my spare time :video_game:
 
+## To Do
+
+ - Game Areas
+    - [ ] Complete Pits Of Inferno Area [EASY]
+    - [ ] Complete Game of Thrones Area [MEDIUM]
+    - [ ] Complete Star Wars Area [HARD]
+  
+  - Global
+     - [x] Use modules importation 
+     - [ ] Use Try, Exceptions and Finally
+     - [x] Use Global Variables 
+     - [ ] Apply Test Driven Development
+   
+   - Object-Oriented Programming
+     - [x] Use Abstraction
+     - [x] Use Encapsulation
+     - [x] Use Herance
+     - [x] Use Polymorfism
+ 
+   
+   - Game Statistics
+     - [ ] Save in a SQL Database some game statistics using methods and variables statics, like:
+        - Total game time until player dies
+        - Total damage to monsters
+        - Total damage taken from monsters
+        - Total Mana used
+        - Total Spells used
+        - Total attacks used
+        - Total health potions used
+        - Total mana potions used
+        - Total gold coins looted
+        - Total gold coins used
+      - [ ] Get the statistics from the database and save it to a file "game-statistics.txt"
+        
+
 ## Tools Used
 
 - [Lubuntu](https://lubuntu.net/)
