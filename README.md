@@ -81,7 +81,7 @@
  
    
    - Game Statistics
-     - [ ] Save in a SQL Database some game statistics using methods and variables statics, like:
+     - [ ] Save in a SQL Database some game statistics using static methods and variables, like:
         - Total game time until player dies
         - Total damage to monsters
         - Total damage taken from monsters
