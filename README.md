@@ -56,7 +56,8 @@
     - [ ] Complete Star Wars Area [HARD]
   
   - Global
-     - [x] Use modules importation 
+     - [x] Use modules importation
+     - [ ] Apply Clean Code principles
      - [ ] Use Try, Exceptions and Finally
      - [x] Use Global Variables 
      - [ ] Apply Test Driven Development
@@ -66,6 +67,17 @@
      - [x] Use Encapsulation
      - [x] Use Herance
      - [x] Use Polymorfism
+     - [ ] Apply S.O.L.I.D principles.
+        - [ ] Single responsibility principle
+           -   A class should have one and only one reason to change, meaning that a class should only have one job.
+        - [ ] Open-closed Principle
+           - Objects or entities should be open for extension, but closed for modification.
+        - [ ] Liskov substitution principle
+           - Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program
+        - [ ] Interface segregation principle
+           - A client should never be forced to implement an interface that it doesn’t use or clients shouldn’t be forced to depend on methods they do not use.
+        - [ ] Dependency inversion principle
+           - Entities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module, but they should depend on abstractions.
  
    
    - Game Statistics
