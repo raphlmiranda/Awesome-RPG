@@ -8,13 +8,11 @@
   <p align="center">
     A simple command line but very funny RPG Turn Game. Have Fun. :smile:
     <br>
-    <br>
-  
-    > "It's pretty simple, but it's better than Flappy Bird" - Elon Musk :joy:
-    
    <br>
   </p>
 
+
+> "It's pretty simple, but it's better than Flappy Bird" - Elon Musk :joy:
 
 
 ## Table of Contents
