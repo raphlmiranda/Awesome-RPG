@@ -9,8 +9,10 @@
     A simple command line but very funny RPG Turn Game. Have Fun. :smile:
     <br>
     <br>
+    <br>
     "It's pretty simple, but it's better than Flappy Bird" - Elon Musk :joy:
-   <br>
+    <br>
+    <br>
   </p>
 
 ## Table of Contents
