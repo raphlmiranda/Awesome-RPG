@@ -97,6 +97,9 @@
         - Total gold coins used
       - [ ] Get the statistics from the database and save it to a file "game-statistics.txt"
     
+   - Golang
+     - [ ] When the game is complete, refactor the the code using Golang.
+    
 
 ## Tools Used
 
