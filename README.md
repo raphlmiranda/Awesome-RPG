@@ -96,7 +96,7 @@
         - Total gold coins looted
         - Total gold coins used
       - [ ] Get the statistics from the database and save it to a file "game-statistics.txt"
-        
+    
 
 ## Tools Used
 
