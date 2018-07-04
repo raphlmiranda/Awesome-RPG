@@ -54,7 +54,7 @@ Under_Line = Functions and Modules
 # ./Monsters/NormalMonsters/PitsOfInferno/Hunter.py
 
 
-from SuperClass.NormalMonster import NormalMonster
+from SuperClass.Monsters.NormalMonster import NormalMonster
 
 from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_HUNTER_NAME, \
 										            GLOBAL_HUNTER_WEAPON_ATTACK, \

@@ -65,25 +65,25 @@ from Monsters.MagicMonsters.PitsOfInferno import Dragon, \
 												 Warlock
 
 from Monsters.DemonMonsters.PitsOfInferno import Fury, \
-														DarkTorturer, \
-														Demon
+												 DarkTorturer, \
+												 Demon
 
-from Monsters.Bosses.Morgaroth import Morgaroth
+from Monsters.Bosses.PitsOfInferno.Morgaroth import Morgaroth
 
 from Functions.NPC import NPC
 from Functions.Prints import *
 from Functions.Role_Play import *
 
-from Areas.Pits_Of_Inferno_Rounds.Against_Bear import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Hunter import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Cyclops import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Dragon import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Infernalist import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Warlock import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Fury import *
-from Areas.Pits_Of_Inferno_Rounds.Against_DarkTorturer import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Demon import *
-from Areas.Pits_Of_Inferno_Rounds.Against_Morgaroth import *
+from Areas.PitsOfInfernoRounds.Against_Bear import *
+from Areas.PitsOfInfernoRounds.Against_Hunter import *
+from Areas.PitsOfInfernoRounds.Against_Cyclops import *
+from Areas.PitsOfInfernoRounds.Against_Dragon import *
+from Areas.PitsOfInfernoRounds.Against_Infernalist import *
+from Areas.PitsOfInfernoRounds.Against_Warlock import *
+from Areas.PitsOfInfernoRounds.Against_Fury import *
+from Areas.PitsOfInfernoRounds.Against_DarkTorturer import *
+from Areas.PitsOfInfernoRounds.Against_Demon import *
+from Areas.PitsOfInfernoRounds.Against_Morgaroth import *
 
 
 def After_Fight( Player ):

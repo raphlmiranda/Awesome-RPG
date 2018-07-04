@@ -28,7 +28,7 @@
 #               Under_Line = functions
 
 from Functions.Prints import *
-from SuperClass.Character import Character
+from SuperClass.Characters.Character import Character
 
 
 def Mage_Spells( Player ):

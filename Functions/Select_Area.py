@@ -54,7 +54,7 @@ Under_Line = Functions and Modules
 # ./Functions/Select_Area.py
 
 
-from Areas.Pits_Of_Inferno_Rounds.Pits_Of_Inferno import *
+from Areas.PitsOfInfernoRounds.Pits_Of_Inferno import *
 
 
 def Select_Area():

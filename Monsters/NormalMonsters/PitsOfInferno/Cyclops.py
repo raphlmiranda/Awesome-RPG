@@ -53,7 +53,7 @@ Under_Line = Functions and Modules
 
 # ./Monsters/NormalMonsters/PitsOfInferno/Cyclops.py
 
-from SuperClass.NormalMonster import NormalMonster
+from SuperClass.Monsters.NormalMonster import NormalMonster
 
 from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_CYCLOPS_NAME, \
 										  			GLOBAL_CYCLOPS_WEAPON_ATTACK, \

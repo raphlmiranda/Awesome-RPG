@@ -55,8 +55,6 @@ Under_Line = Functions and Modules
 
 from Monsters.MagicMonsters.PitsOfInferno.Dragon import Dragon
 
-from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_DRAGON_LIFE
-
 from Functions.Role_Play import *
 from Functions.NPC import NPC
 from Functions.Prints import *
@@ -97,4 +95,7 @@ def Round_Against_Dragon( playerAlive, Player ):
 			break
 
 	After_Fight( Player )
+	'''
+	Player still alive after kill the 2 dragons? Return True, and continue the journey
+	'''
 	return True

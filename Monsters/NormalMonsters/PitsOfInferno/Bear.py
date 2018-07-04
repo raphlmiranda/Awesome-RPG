@@ -53,9 +53,10 @@ Under_Line = Functions and Modules
 
 # ./Monsters/NormalMonsters/PitsOfInferno/Bear.py
 
-from SuperClass.NormalMonster import NormalMonster
+from SuperClass.Monsters.NormalMonster import NormalMonster
 
-from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_BEAR_NAME, \
+from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_BEAR_LIFE, \
+													GLOBAL_BEAR_NAME, \
 										            GLOBAL_BEAR_WEAPON_ATTACK, \
 										            GLOBAL_BEAR_EXPERIENCE
 
@@ -77,11 +78,10 @@ class Bear(NormalMonster):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife):
+	def __init__(self):
 
 		# constructor Normal Monster
-		super().__init__( livingBeingLife,
+		super().__init__( 	GLOBAL_BEAR_LIFE,
 							GLOBAL_BEAR_NAME,
 							GLOBAL_BEAR_WEAPON_ATTACK,
 							GLOBAL_BEAR_EXPERIENCE )

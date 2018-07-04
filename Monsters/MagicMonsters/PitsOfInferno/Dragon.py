@@ -53,12 +53,12 @@ Under_Line = Functions and Modules
 
 # ./Monsters/MagicMonsters/PitsOfInferno/Dragon.py
 
-from SuperClass.MagicMonster import MagicMonster
+from SuperClass.Monsters.MagicMonster import MagicMonster
 
-from Global.Global_Pits_Of_Inferno import GLOBAL_DRAGON_LIFE, \
-										  GLOBAL_DRAGON_NAME, \
-										  GLOBAL_DRAGON_MAGIC_ATTACK, \
-										  GLOBAL_DRAGON_EXPERIENCE
+from Global.Pits_Of_Inferno_Global_Variables import   GLOBAL_DRAGON_LIFE, \
+													  GLOBAL_DRAGON_NAME, \
+													  GLOBAL_DRAGON_MAGIC_ATTACK, \
+													  GLOBAL_DRAGON_EXPERIENCE
 
 
 class Dragon(MagicMonster):
