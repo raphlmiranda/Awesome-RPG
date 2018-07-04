@@ -55,7 +55,8 @@ Under_Line = Functions and Modules
 
 from SuperClass.Monsters.MagicMonster import MagicMonster
 
-from Global.Pits_Of_Inferno_Global_Variables import   GLOBAL_INFERNALIST_NAME, \
+from Global.Pits_Of_Inferno_Global_Variables import   GLOBAL_INFERNALIST_LIFE, \
+													  GLOBAL_INFERNALIST_NAME, \
 			                                          GLOBAL_INFERNALIST_MAGIC_ATTACK, \
 			                                          GLOBAL_INFERNALIST_EXPERIENCE
 
@@ -77,11 +78,10 @@ class Infernalist(MagicMonster):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife):
+	def __init__(self):
 
 		# constructor Magic Monster
-		super().__init__( livingBeingLife,
+		super().__init__(   GLOBAL_INFERNALIST_LIFE,
 							GLOBAL_INFERNALIST_NAME,
 							GLOBAL_INFERNALIST_MAGIC_ATTACK,
 							GLOBAL_INFERNALIST_EXPERIENCE )

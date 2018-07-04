@@ -55,10 +55,11 @@ Under_Line = Functions and Modules
 
 from SuperClass.Monsters.DemonMonster import DemonMonster
 
-from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_DARKTORTURER_NAME, \
-										  GLOBAL_DARKTORTURER_WEAPON_ATTACK, \
-										  GLOBAL_DARKTORTURER_MAGIC_ATTACK, \
-										  GLOBAL_DARKTORTURER_EXPERIENCE
+from Global.Pits_Of_Inferno_Global_Variables import   GLOBAL_DARKTORTURER_LIFE, \
+													  GLOBAL_DARKTORTURER_NAME, \
+													  GLOBAL_DARKTORTURER_WEAPON_ATTACK, \
+													  GLOBAL_DARKTORTURER_MAGIC_ATTACK, \
+													  GLOBAL_DARKTORTURER_EXPERIENCE
 
 class DarkTorturer(DemonMonster):
 
@@ -78,15 +79,10 @@ class DarkTorturer(DemonMonster):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife,
-				 demonMonsterName,
-				 demonMonsterSpellDamage,
-				 demonMonsterAttackDamage,
-				 demonMonsterExperienceForKill):
+	def __init__(self):
 
 		# construct Demon Monster
-		super().__init__( livingBeingLife,
+		super().__init__( 	GLOBAL_DARKTORTURER_LIFE,
 							GLOBAL_DARKTORTURER_NAME,
 							GLOBAL_DARKTORTURER_WEAPON_ATTACK,
 							GLOBAL_DARKTORTURER_MAGIC_ATTACK,

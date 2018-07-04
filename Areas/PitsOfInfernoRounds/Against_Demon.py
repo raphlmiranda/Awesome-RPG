@@ -1,52 +1,68 @@
+'''
+The MIT License (MIT)
+
+Copyright (c) 2018 Alex Galhardo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+'''
+
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
+#      				    AWESOME RPG                        #
 #                                                          #
-#                       ALPHA                              #
 #                                                          #
-#                VERSION Console ~ PYTHON3                 #
+#                Console Version ~ Python3                 #
 #                                                          #
-#               Against Demon Round Function               #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-#       Code Patterns
-#
-# UPPERCASE = global variables
-# PascalCase = Classes
-# camelCase = local variables, methods, attributes, parameters, arguments
-# Under_Line = Functions and Modules
+'''
+Code Patterns
 
-from Monsters.DemonMonsters.Pits_Of_Inferno.Demon import Demon
+UPPERCASE = Global Variables
 
-from Global.Global_Pits_Of_Inferno import GLOBAL_DEMON_NAME, \
-										  GLOBAL_DEMON_MAGIC_ATTACK, \
-										  GLOBAL_DEMON_WEAPON_ATTACK, \
-										  GLOBAL_DEMON_EXPERIENCE
+PascalCase = Classes and Folders
 
-from Functions.RolePlay import *
+camelCase = local variables, methods, attributes, parameters, arguments
+
+Under_Line = Functions and Modules
+'''
+
+# ./Areas/PitsOfInferno/Against_Demon.py
+
+from Monsters.DemonMonsters.PitsOfInferno.Demon import Demon
+
+from Functions.Role_Play import *
+from Functions.NPC import NPC
+from Functions.Prints import *
 
 def Round_Against_Demon( playerAlive, Player ):
 
-	newDemonOne = Demon(GLOBAL_DEMON_LIFE,
-		                GLOBAL_DEMON_NAME,
-		                GLOBAL_DEMON_MAGIC_ATTACK,
-		                GLOBAL_DEMON_WEAPON_ATTACK,
-		                GLOBAL_DEMON_EXPERIENCE)
-
-	newDemonTwo = Demon(GLOBAL_DEMON_LIFE,
-		                GLOBAL_DEMON_NAME,
-		                GLOBAL_DEMON_MAGIC_ATTACK,
-		                GLOBAL_DEMON_WEAPON_ATTACK,
-		                GLOBAL_DEMON_EXPERIENCE)
+	newDemonOne = Demon()
+	newDemonTwo = Demon()
 
 	while True:
 

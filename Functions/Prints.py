@@ -62,10 +62,9 @@ def Game_Introduction():
 	print('\n\t\t Alex Galhardo Vieira')
 	print('\t\t github.com/AlexGalhardo')
 	print('\t\t aleexgvieira@gmail.com')
-	print('\t\t ICMC USP - 2018')
-	print('\t\t São Carlos - Brazil')
-	print("\n\n\n\t\t Welcome to Tibians RPG.")
-	print("\t\t A Fan Game Based in Tibia Online.")
+	print("\n\t\t Welcome to Awesome RPG\n")
+	print("\t\t A Fan Game Inspired in \n\t\t Tibia Online and\n\t\t Final Fantasy Classics.")
+
 
 
 '''

@@ -55,8 +55,6 @@ Under_Line = Functions and Modules
 
 from Monsters.NormalMonsters.PitsOfInferno.Bear import Bear
 
-# from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_BEAR_LIFE
-
 from Functions.Role_Play import *
 from Functions.NPC import NPC
 from Functions.Prints import *

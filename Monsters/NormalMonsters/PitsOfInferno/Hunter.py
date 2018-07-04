@@ -56,7 +56,8 @@ Under_Line = Functions and Modules
 
 from SuperClass.Monsters.NormalMonster import NormalMonster
 
-from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_HUNTER_NAME, \
+from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_HUNTER_LIFE, \
+													GLOBAL_HUNTER_NAME, \
 										            GLOBAL_HUNTER_WEAPON_ATTACK, \
 										  			GLOBAL_HUNTER_EXPERIENCE
 
@@ -78,11 +79,10 @@ class Hunter(NormalMonster):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife):
+	def __init__(self):
 
 		# constructor Normal Monster
-		super().__init__( livingBeingLife,
+		super().__init__( 	GLOBAL_HUNTER_LIFE,
 							GLOBAL_HUNTER_NAME,
 							GLOBAL_HUNTER_WEAPON_ATTACK,
 							GLOBAL_HUNTER_EXPERIENCE )

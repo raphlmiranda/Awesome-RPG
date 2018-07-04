@@ -54,5 +54,5 @@ Under_Line = Functions and Modules
 from Functions.Start import Start
 
 # Start Game
-# /Functions -> Start.py
+# ./Functions -> Start.py
 Start()

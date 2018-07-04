@@ -56,10 +56,10 @@ Under_Line = Functions and Modules
 from SuperClass.Monsters.BOSS import BOSS
 
 from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_MORGAROTH_LIFE, \
-								   		  GLOBAL_MORGAROTH_NAME, \
-								   		  GLOBAL_MORGAROTH_WEAPON_ATTACK, \
-								   		  GLOBAL_MORGAROTH_MAGIC_ATTACK, \
-								   	      GLOBAL_MORGAROTH_EXPERIENCE
+								   		  			GLOBAL_MORGAROTH_NAME, \
+								   		  			GLOBAL_MORGAROTH_WEAPON_ATTACK, \
+								   		  			GLOBAL_MORGAROTH_MAGIC_ATTACK, \
+								   	      			GLOBAL_MORGAROTH_EXPERIENCE
 
 class Morgaroth(BOSS):
 
@@ -79,15 +79,10 @@ class Morgaroth(BOSS):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife,
-				 demonMonsterName,
-				 demonMonsterSpellDamage,
-				 demonMonsterAttackDamage,
-				 demonMonsterExperienceForKill):
+	def __init__(self):
 
 		# constructor Demon Monster
-		super().__init__( livingBeingLife,
+		super().__init__(   GLOBAL_MORGAROTH_LIFE,
 							GLOBAL_MORGAROTH_NAME,
 							GLOBAL_MORGAROTH_MAGIC_ATTACK,
 							GLOBAL_MORGAROTH_WEAPON_ATTACK,

@@ -55,7 +55,8 @@ Under_Line = Functions and Modules
 
 from SuperClass.Monsters.MagicMonster import MagicMonster
 
-from Global.Pits_Of_Inferno_Global_Variables import   GLOBAL_WARLOCK_NAME, \
+from Global.Pits_Of_Inferno_Global_Variables import   GLOBAL_WARLOCK_LIFE, \
+													  GLOBAL_WARLOCK_NAME, \
 												      GLOBAL_WARLOCK_MAGIC_ATTACK, \
 													  GLOBAL_WARLOCK_EXPERIENCE
 
@@ -77,11 +78,10 @@ class Warlock(MagicMonster):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife):
+	def __init__(self):
 
 		# constructor Magic Monster
-		super().__init__( livingBeingLife,
+		super().__init__(   GLOBAL_WARLOCK_LIFE,
 							GLOBAL_WARLOCK_NAME,
 							GLOBAL_WARLOCK_MAGIC_ATTACK,
 							GLOBAL_WARLOCK_EXPERIENCE )
