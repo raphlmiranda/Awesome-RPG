@@ -44,84 +44,57 @@ Code Patterns
 
 UPPERCASE = global variables
 
-PascalCase = Classes
+PascalCase = Classes and Folders
 
 camelCase = local variables, methods, attributes, parameters, arguments
 
 Under_Line = Functions and Modules
 '''
 
-# ./Functions/Start.py 
+# ./Areas/PitsOfInfernoRounds/Against_Dragon.py
 
-from Functions.Prints import *
-from Functions.Character_Creation import *
+from Monsters.MagicMonsters.PitsOfInferno.Dragon import Dragon
+
+from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_DRAGON_LIFE
+
 from Functions.Role_Play import *
-from Functions.Select_Area import *
-from Functions.NPC import *
+from Functions.NPC import NPC
+from Functions.Prints import *
 
-def Start():
 
-	'''
-	While the player don't enter 0 to stop the game
-	continue the game
-	'''
+
+def Round_Against_Dragon( playerAlive, Player ):
+
+	newDragonOne = Dragon()
+	newDragonTwo = Dragon()
+
 	while True:
 
-		'''
-		This function call Prints.py inside ./Functions/
-		This function say a brief introduction to the game
-		'''
-		Game_Introduction()
+		playerStillAlive = Round( Player, newDragonOne )
 
-		'''
-		This function call Prints.py inside ./Functions/
-		This function says how to play the game
-		'''
-		How_To_Play_Introduction()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function create the character name
-		'''
-		characterName = Create_Character_Name()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character vocation
-		'''
-		vocationOption = Choose_Character_Vocation()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character objet
-		'''
-		CharacterObject = Create_Character_Object( characterName, vocationOption )
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character objet
-		'''
-		selectedArea = Select_Area()
-
-
-		'''
-		This function call Adventure_Game_Start inside ./Functions/
-		This function start main game loop 
-		'''
-		Adventure_Game_Start( selectedArea, CharacterObject )
-
-		'''
-		When the game loop above is done
-		'''
-		print('\t Would you like to play again?')
-		print('\t Enter [1] --> Yes, lets goo')
-		print('\t Enter [0] --> No, I am happy whit my perfomance today')
-		
-		playAgain = int(input('\t Option: '))
-
-		if playAgain == 1:
-			continue
+		if playerStillAlive:
+			break
 		else:
+			print('\n\n\t ... YOU ARE DEAD...')
+			print('\n\n\t ... GAME OVER ...\n\n')
+			playerAlive = False
+			return playerAlive
 			break
 
-	print('\n\n\t Bye Bye. Come Back Later! :D\n\n')
+	After_Fight( Player )
+
+	while True:
+
+		playerStillAlive = Round( Player, newDragonTwo )
+
+		if playerStillAlive:
+			break
+		else:
+			print('\n\n\t ... YOU ARE DEAD...')
+			print('\n\n\t ... GAME OVER ...\n\n')
+			playerAlive = False
+			return playerAlive
+			break
+
+	After_Fight( Player )
+	return True

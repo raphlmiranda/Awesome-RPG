@@ -1,49 +1,78 @@
+'''
+The MIT License (MIT)
+
+Copyright (c) 2018 Alex Galhardo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+'''
+
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   #                                                          #
+#      				    AWESOME RPG                        #
 #                                                          #
-#                       ALPHA                              #
 #                                                          #
-#                VERSION Console ~ PYTHON3                 #
+#                Console Version ~ Python3                 #
 #                                                          #
-#              Pits Of Inferno Gameplay Function           #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   MIT LICENSE                                            #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-#       Code Patterns
-#
-# UPPERCASE = global variables
-# PascalCase = Classes
-# camelCase = local variables, methods, attributes, parameters, arguments
-# Under_Line = Functions and Modules
+'''
+Code Patterns
 
-from Global.Global_Pits_Of_Inferno import *
+UPPERCASE = global variables
 
-from Monsters.NormalMonsters.Pits_Of_Inferno.Bear import Bear
-from Monsters.NormalMonsters.Pits_Of_Inferno.Hunter import Hunter
-from Monsters.NormalMonsters.Pits_Of_Inferno.Cyclops import Cyclops
+PascalCase = Classes
 
-from Monsters.MagicMonsters.Pits_Of_Inferno.Dragon import Dragon
-from Monsters.MagicMonsters.Pits_Of_Inferno.Infernalist import Infernalist
-from Monsters.MagicMonsters.Pits_Of_Inferno.Warlock import Warlock
+camelCase = local variables, methods, attributes, parameters, arguments
 
-from Monsters.DemonMonsters.Pits_Of_Inferno.Fury import Fury
-from Monsters.DemonMonsters.Pits_Of_Inferno.DarkTorturer import DarkTorturer
-from Monsters.DemonMonsters.Pits_Of_Inferno.Demon import Demon
+Under_Line = Functions and Modules
+'''
+
+# ./Areas/Pits_Of_Inferno_Rounds/Pits_Of_Inferno.py
+
+
+from Global.Pits_Of_Inferno_Global_Variables import *
+
+from Monsters.NormalMonsters.PitsOfInferno import Bear, \
+												  Hunter, \
+												  Cyclops
+
+from Monsters.MagicMonsters.PitsOfInferno import Dragon, \
+												 Infernalist, \
+												 Warlock
+
+from Monsters.DemonMonsters.PitsOfInferno import Fury, \
+														DarkTorturer, \
+														Demon
 
 from Monsters.Bosses.Morgaroth import Morgaroth
 
 from Functions.NPC import NPC
 from Functions.Prints import *
-from Functions.RolePlay import *
+from Functions.Role_Play import *
 
 from Areas.Pits_Of_Inferno_Rounds.Against_Bear import *
 from Areas.Pits_Of_Inferno_Rounds.Against_Hunter import *

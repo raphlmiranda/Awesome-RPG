@@ -51,77 +51,47 @@ camelCase = local variables, methods, attributes, parameters, arguments
 Under_Line = Functions and Modules
 '''
 
-# ./Functions/Start.py 
+# ./Functions/Select_Area.py
 
-from Functions.Prints import *
-from Functions.Character_Creation import *
-from Functions.Role_Play import *
-from Functions.Select_Area import *
-from Functions.NPC import *
 
-def Start():
+from Areas.Pits_Of_Inferno_Rounds.Pits_Of_Inferno import *
 
-	'''
-	While the player don't enter 0 to stop the game
-	continue the game
-	'''
+
+def Select_Area():
+
 	while True:
 
-		'''
-		This function call Prints.py inside ./Functions/
-		This function say a brief introduction to the game
-		'''
-		Game_Introduction()
-
-		'''
-		This function call Prints.py inside ./Functions/
-		This function says how to play the game
-		'''
-		How_To_Play_Introduction()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function create the character name
-		'''
-		characterName = Create_Character_Name()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character vocation
-		'''
-		vocationOption = Choose_Character_Vocation()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character objet
-		'''
-		CharacterObject = Create_Character_Object( characterName, vocationOption )
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character objet
-		'''
-		selectedArea = Select_Area()
-
-
-		'''
-		This function call Adventure_Game_Start inside ./Functions/
-		This function start main game loop 
-		'''
-		Adventure_Game_Start( selectedArea, CharacterObject )
-
-		'''
-		When the game loop above is done
-		'''
-		print('\t Would you like to play again?')
-		print('\t Enter [1] --> Yes, lets goo')
-		print('\t Enter [0] --> No, I am happy whit my perfomance today')
+		print('\n\t --- Chose a area to play ---')
+		print('\n\t Enter [1] --> Pits of Inferno --> EASY')
+		print('\t Enter [2] --> Inquisition Quest --> MEDIUM')
+		print('\t Enter [3] --> Ferumbras Tower --> HARD')
+		enter('\n\t Enter [4] --> Play all areas --> Full Game Experience')
 		
-		playAgain = int(input('\t Option: '))
+		areaOption = int(input('\t Area Option: '))
 
-		if playAgain == 1:
+		if areaOption < 1 or areaOption > 4:
+			print('\t Choose a valid option!')
 			continue
+		elif areaOption == 1:
+			return 1
+			break
+		elif areaOption == 2:
+			return 2
+			break
+		elif areaOption == 3:
+			return 3
+			break
 		else:
+			return 4
 			break
 
-	print('\n\n\t Bye Bye. Come Back Later! :D\n\n')
+def Adventure_Game_Start( selectedArea, Player ):
+
+	if selectedArea == 1:
+		Pits_Of_Inferno_Start_Game( Player )
+
+	elif selectedArea == 2:
+		Game_Of_Thrones_Start_Game( Player )
+
+	else:
+		Star_Wars__Start_Game( Player )

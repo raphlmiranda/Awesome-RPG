@@ -44,84 +44,45 @@ Code Patterns
 
 UPPERCASE = global variables
 
-PascalCase = Classes
+PascalCase = Classes and Folders
 
 camelCase = local variables, methods, attributes, parameters, arguments
 
 Under_Line = Functions and Modules
 '''
 
-# ./Functions/Start.py 
+# ./Monsters/NormalMonsters/PitsOfInferno/Hunter.py
 
-from Functions.Prints import *
-from Functions.Character_Creation import *
-from Functions.Role_Play import *
-from Functions.Select_Area import *
-from Functions.NPC import *
 
-def Start():
+from SuperClass.NormalMonster import NormalMonster
+
+from Global.Pits_Of_Inferno_Global_Variables import GLOBAL_HUNTER_NAME, \
+										            GLOBAL_HUNTER_WEAPON_ATTACK, \
+										  			GLOBAL_HUNTER_EXPERIENCE
+
+class Hunter(NormalMonster):
 
 	'''
-	While the player don't enter 0 to stop the game
-	continue the game
+	~ LiveBeing SuperClass
+	self.livingBeingtotalLife
+	self.livingBeingCurrentlyLife
+	def setLiveBeingTotalLife( $setLiveBeingTotalLife )
+	def getLiveBeingTotalLife():int
 	'''
-	while True:
 
-		'''
-		This function call Prints.py inside ./Functions/
-		This function say a brief introduction to the game
-		'''
-		Game_Introduction()
+	'''
+	~ Normal Monster SuperClass
+	self.magicMonsterSpellDamage = magicMonsterSpellDamage
+	self.magicMonsterName = magicMonsterName
+	self.magicMonsterExperienceForKill = magicMonsterExperienceForKill
+	self.lootGoldCoins = randint(100, 500)
+	'''
 
-		'''
-		This function call Prints.py inside ./Functions/
-		This function says how to play the game
-		'''
-		How_To_Play_Introduction()
+	def __init__(self,
+				 livingBeingLife):
 
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function create the character name
-		'''
-		characterName = Create_Character_Name()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character vocation
-		'''
-		vocationOption = Choose_Character_Vocation()
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character objet
-		'''
-		CharacterObject = Create_Character_Object( characterName, vocationOption )
-
-		'''
-		This function call Character_Creation inside ./Functions/
-		This function get character objet
-		'''
-		selectedArea = Select_Area()
-
-
-		'''
-		This function call Adventure_Game_Start inside ./Functions/
-		This function start main game loop 
-		'''
-		Adventure_Game_Start( selectedArea, CharacterObject )
-
-		'''
-		When the game loop above is done
-		'''
-		print('\t Would you like to play again?')
-		print('\t Enter [1] --> Yes, lets goo')
-		print('\t Enter [0] --> No, I am happy whit my perfomance today')
-		
-		playAgain = int(input('\t Option: '))
-
-		if playAgain == 1:
-			continue
-		else:
-			break
-
-	print('\n\n\t Bye Bye. Come Back Later! :D\n\n')
+		# constructor Normal Monster
+		super().__init__( livingBeingLife,
+							GLOBAL_HUNTER_NAME,
+							GLOBAL_HUNTER_WEAPON_ATTACK,
+							GLOBAL_HUNTER_EXPERIENCE )
