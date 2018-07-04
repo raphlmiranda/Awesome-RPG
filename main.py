@@ -22,19 +22,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
 
-############################################################
-#                                                          #
-#      				    AWESOME RPG                        #
-#                                                          #
-#                                                          #
-#                Console Version ~ Python3                 #
-#                                                          #
-#														   #
-#   Alex Galhardo Vieira   								   #
-#   github.com/AlexGalhardo                                #
-#	aleexgvieira@gmail.com 								   #
-#														   #
-############################################################
+'''                                               
+    AWESOME RPG                        
+                                                                                                          
+    Console Version ~ Python3                 
+                                                          														   
+    Alex Galhardo Vieira   								  
+    github.com/AlexGalhardo                                
+	aleexgvieira@gmail.com 								   
+'''														   
+
 
 #!/usr/bin/python3
 # coding: utf-8
