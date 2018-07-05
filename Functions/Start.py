@@ -95,7 +95,7 @@ def Start():
 		This function call Character_Creation inside ./Functions/
 		This function get character objet
 		'''
-		CharacterObject = Create_Character_Object( characterName, vocationOption )
+		CharacterObject = Create_Character( characterName, vocationOption )
 
 		'''
 		This function call Character_Creation inside ./Functions/

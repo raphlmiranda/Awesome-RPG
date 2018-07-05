@@ -121,20 +121,17 @@ class Knight(Warrior):
 	'''
 
 	def __init__(self,
-				 livingBeingLife,
 				 characterName,
-				 characterVocation,
 				 warriorWeaponAttack):
 
 		# constructor warrior superclass
-		super().__init__( livingBeingLife,
+		super().__init__( KNIGHT_INITIAL_LIFE,
 			              characterName,
-						  characterVocation,
 						  warriorWeaponAttack )
 
 		self.knightTotalMana = 100
 
-		self.characterVocation = "Aquiles"
+		self.characterVocation = "Knight"
 
 		self.characterCurrentlyMana = KNIGHT_INITIAL_MANA
 

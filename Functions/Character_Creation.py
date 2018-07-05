@@ -53,11 +53,10 @@ Under_Line = Functions and Modules
 
 # ./Functions/Character_Creation.py
 
-from Characters import Knight, \
-					   Druid, \
-					   Paladin, \
-					   Sorcerer
-
+from Characters.Knight import Knight
+from Characters.Paladin import Paladin
+from Characters.Druid import Druid
+from Characters.Sorcerer import Sorcerer
 
 from Global.Characters_Global_Variables import KNIGHT_INITIAL_LIFE, \
 											   PALADIN_INITIAL_LIFE, \
@@ -170,36 +169,30 @@ def Choose_Paladin_Weapon():
 
 
 
-def Create_Character_Object( characterName, vocationOption ):
+def Create_Character( characterName, vocationOption ):
 
 	if vocationOption == 1:
 
 		warriorWeaponAttack = Choose_Knight_Weapon()
 
-		Character = Knight( KNIGHT_INITIAL_LIFE,
-			                characterName,
-			                "WARRIOR",
+		Character = Knight( characterName,
 			                warriorWeaponAttack )
 
 	elif vocationOption == 2:
 
 		warriorWeaponAttack = Choose_Paladin_Weapon()
 
-		Character = Paladin( PALADIN_INITIAL_LIFE,
-						     characterName,
-			                 "WARRIOR",
+		Character = Paladin( characterName,
 			                 warriorWeaponAttack )
 
 	elif vocationOption == 3:
 
-		Character = Druid( MAGE_INITIAL_LIFE,
-			               characterName,
+		Character = Druid( characterName,
 			               "Druid" )
 
 	else:
 
-		Character = Sorcerer( MAGE_INITIAL_LIFE,
-							  characterName,
+		Character = Sorcerer( characterName,
 			                  "Sorcerer")
 
 

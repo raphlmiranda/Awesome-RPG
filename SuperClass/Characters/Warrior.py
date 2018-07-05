@@ -99,13 +99,12 @@ class Warrior(Character):
 	def __init__( self,
 				  livingBeingLife,
 				  characterName,
-				  characterVocation, 
-				  warriorWeaponAttack ):
+				  warriorWeaponAttack):
 
 		# construct abstract class character
 		super().__init__( livingBeingLife, 
-		                  characterName, 
-		                  characterVocation ) # construct character 
+		                  characterName,
+		                  'Warrior') 
 
 		self.warriorWeaponAttack = warriorWeaponAttack
 
@@ -116,6 +115,7 @@ class Warrior(Character):
 		self.warriorTotalAttacksToNextWeaponSkillLevel = 3
 
 		self.warriorDefense = 10
+
 		self.characterVocationType = "WARRIOR"
 
 	

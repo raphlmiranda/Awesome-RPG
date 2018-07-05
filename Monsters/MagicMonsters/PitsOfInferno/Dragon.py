@@ -79,8 +79,7 @@ class Dragon(MagicMonster):
 	self.lootGoldCoins = randint(100, 500)
 	'''
 
-	def __init__(self,
-				 livingBeingLife):
+	def __init__(self):
 
 		# construct MagicMonster
 		super().__init__(   GLOBAL_DRAGON_LIFE,

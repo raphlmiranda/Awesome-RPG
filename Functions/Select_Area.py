@@ -65,7 +65,7 @@ def Select_Area():
 		print('\n\t Enter [1] --> Pits of Inferno --> EASY')
 		print('\t Enter [2] --> Inquisition Quest --> MEDIUM')
 		print('\t Enter [3] --> Ferumbras Tower --> HARD')
-		enter('\n\t Enter [4] --> Play all areas --> Full Game Experience')
+		print('\n\t Enter [4] --> Play all areas --> Full Game Experience')
 		
 		areaOption = int(input('\t Area Option: '))
 

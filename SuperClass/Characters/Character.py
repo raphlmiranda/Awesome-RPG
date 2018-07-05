@@ -45,7 +45,7 @@ class Character(LivingBeing):
 	def __init__( self,
 				  livingBeingLife,
 		          characterName,
-		          characterVocation ):
+		          characterVocation):
 
 		super().__init__( livingBeingLife )
 
@@ -70,7 +70,7 @@ class Character(LivingBeing):
 		return self.characterCurrentlyMana
 
 	def getCharacterVocationType(self):
-		if self.characterVocation == 'Knight' or self.characterVocation == 'Paladin':
+		if self.characterVocation == 'Warrior':
 			return "WARRIOR"
 		else:
 			return "MAGE"

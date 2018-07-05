@@ -57,7 +57,8 @@ from SuperClass.Characters.Character import Character
 from SuperClass.Characters.Warrior import Warrior
 from random import randint
 
-from Global.Characters_Global_Variables import   PALADIN_ADD_LIFE_FOR_LEVEL, \
+from Global.Characters_Global_Variables import   PALADIN_INITIAL_LIFE, \
+												 PALADIN_ADD_LIFE_FOR_LEVEL, \
 												 PALADIN_ADD_MANA_FOR_LEVEL, \
 												 PALADIN_REG_LIFE_EACH_TURN, \
 												 PALADIN_REG_MANA_EACH_TURN
@@ -113,20 +114,18 @@ class Paladin(Warrior):
 	'''
 
 	def __init__(self,
-				 livingBeingLife,
 				 characterName,
-				 characterVocation,
 				 warriorWeaponAttack):
 
 		# constructor warrior
-		super().__init__( livingBeingLife,
+		super().__init__( PALADIN_INITIAL_LIFE,
 			              characterName,
-						  characterVocation,
+						  'WARRIOR',
 						  warriorWeaponAttack )
 
 		self.paladinTotalMana = 100
 
-		self.characterVocation = "Robin Hood"
+		self.characterVocation = "Paladin"
 
 		self.characterCurrentlyMana = 100
 
