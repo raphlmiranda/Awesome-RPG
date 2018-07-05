@@ -163,7 +163,7 @@ class Knight(Warrior):
 			baseAttackFirst = baseAttack * 1.2
 			baseAttackSecond = baseAttack * 1.5
 
-			print('\n\t ' + self.getCharacterName() + " says: EXORI ICO")
+			print('\n\t ' + self.getCharacterName() + " says: Abracadabraaa")
 
 			spellDamage = randint(baseAttackFirst, baseAttackFirst)
 
@@ -194,7 +194,7 @@ class Knight(Warrior):
 			baseAttackFirst = baseAttack * 1.7
 			baseAttackSecond = baseAttack * 2.5
 
-			print('\n\t ' + self.getCharacterName() + " says: EXORI")
+			print('\n\t ' + self.getCharacterName() + " says: Petrificus Totalus")
 
 			spellDamage = randint(baseAttackFirst, baseAttackFirst)
 
@@ -226,7 +226,7 @@ class Knight(Warrior):
 			baseAttackFirst = int(baseAttack * 2.2)
 			baseAttackSecond = int(baseAttack * 3.0)
 
-			print('\n\t ' + self.getCharacterName() + " says: EXORI GRAN")
+			print('\n\t ' + self.getCharacterName() + " says: Exori Gran")
 
 			spellDamage = randint(baseAttackFirst, baseAttackSecond)
 

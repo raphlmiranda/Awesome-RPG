@@ -1,34 +1,61 @@
+'''
+The MIT License (MIT)
+
+Copyright (c) 2018 Alex Galhardo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+'''
+
 ############################################################
 #                                                          #
-#      Tibians RPG ~ A Fan Game inspired in Tibia Online   #
+#      				    AWESOME RPG                        #
 #                                                          #
-#                       ALPHA                              #
 #                                                          #
-#                VERSION Console ~ PYTHON3                 #
+#                Console Version ~ Python3                 #
 #                                                          #
-#               Role Play Functions                        #
-#   													   #
-#   Alex Galhardo Vieira                                   #
-#   aleexgvieira@gmail.com                                 #
-#   github.com/AlexGalhardo                                #
 #														   #
-#   ICMC USP - 2018 									   #
-#	São Carlos - Brazil									   #
+#   Alex Galhardo Vieira   								   #
+#   github.com/AlexGalhardo                                #
+#	aleexgvieira@gmail.com 								   #
+#														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+'''
+Code Patterns
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+UPPERCASE = Global Variables
+
+PascalCase = Classes and Folders
+
+camelCase = local variables, methods, attributes, parameters, arguments
+
+Under_Line = Functions and Modules
+'''
+
+# ./Functions/Role_Play.py
 
 from Functions.Prints import *
 from SuperClass.Characters.Character import Character
+from SuperClass.GameStatistics import GameStatistics
 
 
 def Mage_Spells( Player ):
@@ -197,12 +224,9 @@ def Round( Player , Monster ):
 
 	while True:
 
-		# SHOW PLAYER AND MONSTER ROUND STATUS
 		Player.getCharacterRoundStatus()
 		Monster.getMonsterRoundStatus()
 
-
-		# PLAYER ROUND --> ATTACK, USE POTIONS, SPELLS...
 		playerAction = Player_Action( Player )
 
 		Round_Status_Print()

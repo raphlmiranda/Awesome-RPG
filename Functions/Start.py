@@ -59,6 +59,8 @@ from Functions.Role_Play import *
 from Functions.Select_Area import *
 from Functions.NPC import *
 
+from SuperClass.GameStatistics import GameStatistics
+
 def Start():
 
 	'''
@@ -111,8 +113,15 @@ def Start():
 		Adventure_Game_Start( selectedArea, CharacterObject )
 
 		'''
-		When the game loop above is done
+		If Player Dies or Complete the Area
 		'''
+
+		'''
+		Show Game Statistics So Far
+		'''
+		
+		GameStatistics.getGameStatistics()
+
 		print('\t Would you like to play again?')
 		print('\t Enter [1] --> Yes, lets goo')
 		print('\t Enter [0] --> No, I am happy whit my perfomance today')

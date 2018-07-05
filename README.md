@@ -27,9 +27,9 @@
 
 # How to use the program
 
-     git clone https://github.com/AlexGalhardo/Awesome-RPG.git
-     cd Awesome-RPG
-     python3 main.py
+     $ git clone https://github.com/AlexGalhardo/Awesome-RPG.git
+     $ cd Awesome-RPG
+     $ python3 main.py
 
 ## Inspirations
 
@@ -93,6 +93,8 @@
         - Total attacks used
         - Total health potions used
         - Total mana potions used
+        - Total Health Potions Bought
+        - Total Mana Potions Bought
         - Total gold coins looted
         - Total gold coins used
       - [ ] Get the statistics from the database and save it to a file "game-statistics.txt"

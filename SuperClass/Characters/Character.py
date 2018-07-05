@@ -1,35 +1,61 @@
+'''
+The MIT License (MIT)
+
+Copyright (c) 2018 Alex Galhardo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+'''
+
 ############################################################
 #                                                          #
-#      Awesome RPG ~ A Fan Game inspired in Tibia Online   ##                                                          #
-#                       ALPHA                              #
+#      				    AWESOME RPG                        #
 #                                                          #
-#                VERSION Console ~ PYTHON3                 #
 #                                                          #
-#                     Main Function Start                  #
+#                Console Version ~ Python3                 #
+#                                                          #
 #														   #
 #   Alex Galhardo Vieira   								   #
 #   github.com/AlexGalhardo                                #
 #	aleexgvieira@gmail.com 								   #
-#   Alex Galhardo Vieira   								   #
-#   ICMC USP - 2018                                        #
-#   São Carlos - Brazil									   #
 #														   #
 ############################################################
 
 #!/usr/bin/python3
 # coding: utf-8
 
-# Comments here
+'''
+Code Patterns
 
-# Code Patterns
-#               UPPERCASE = global variables
-#               PascalCase = modules and Classes
-#               camelCase = local variables, methods, attributes, parameters, arguments
-#               Under_Line = functions
+UPPERCASE = Global Variables
 
+PascalCase = Classes and Folders
+
+camelCase = local variables, methods, attributes, parameters, arguments
+
+Under_Line = Functions and Modules
+'''
+
+# ./SuperClass/Characters/Character.py
 
 from SuperClass.LivingBeing import LivingBeing
 from random import randint
+from SuperClass.GameStatistics import GameStatistics
 
 # abstract class that knights, paladins, druids and sorcerer must inherit 
 class Character(LivingBeing):
@@ -132,9 +158,6 @@ class Character(LivingBeing):
 	def addManaPotions(self, manaPotions):
 		self.characterCurrentlyManaPotions += manaPotions
 
-
-
-	### character method --> Use Health Potion ### 
 	def useHealthPotion(self):
 
 		while True:
@@ -145,8 +168,9 @@ class Character(LivingBeing):
 
 			if healthPotionsToUse == 0:
 				break
-			
+
 			elif healthPotionsToUse <= self.getCharacterCurrentlyHealthPotions():
+				GameStatistics.totalHealthPotionsUsed += healthPotionsToUse
 				print('\n')
 				while healthPotionsToUse != 0:
 					healthCure = randint(75, 125)
@@ -158,12 +182,8 @@ class Character(LivingBeing):
 				print('\n\t You dont have sufficient health potions!')
 				continue
 
-
-	### character method --> Use Mana Potion ### 
 	def useManaPotion(self):
-		'''
-		docstring here
-		'''
+
 		while True:
 
 			print('\n\t You have: {} mana potions.'.format(self.getCharacterCurrentlyManaPotions()))
@@ -173,14 +193,14 @@ class Character(LivingBeing):
 			manaPotionsToUse = int(input('\t How many Mana Potions you want to use: '))
 
 			if manaPotionsToUse == 0:
-				break
+				break			
 
 			elif manaPotionsToUse <= self.getCharacterCurrentlyManaPotions():
-
+				GameStatistics.totalHealthPotionsUsed += manaPotionsToUse
 				print('\n')
 				while manaPotionsToUse != 0:
 					manaCure = randint(75, 125)
-					self.livingBeingCurrentlyLife += manaCure
+					self.characterCurrentlyMana += manaCure
 					self.characterCurrentlyManaPotions-= 1
 					print('\t You healed {} points of mana!'.format(manaCure))
 					manaPotionsToUse -= 1
@@ -189,17 +209,19 @@ class Character(LivingBeing):
 				continue
 
 	def takeDamage(self, monsterDamage ):
+		GameStatistics.totalDamageTakenFromMonsters += monsterDamage
 		self.livingBeingCurrentlyLife -= monsterDamage
 		print('\t Monster Damage: {}'.format(monsterDamage))
 		
-
 	def getLootMonster(self, lootMonster ):
+		GameStatistics.totalGoldCoinsLooted += lootMonster
 		self.characterCurrentlyGoldCoins += lootMonster
 
 	def getMonsterExperience(self, experienceMonster ):
 		self.characterCurrentlyXP += experienceMonster
 
 	def usedGoldCoinsInNPC(self, usedGoldCoinsInNPC ):
+		GameStatistics.totalGoldCoinsUsed += usedGoldCoinsInNPC
 		self.characterCurrentlyGoldCoins -= usedGoldCoinsInNPC
 
 	def getCharacterCurrentlyXP(self):

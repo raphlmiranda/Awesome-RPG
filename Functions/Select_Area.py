@@ -65,7 +65,7 @@ def Select_Area():
 		print('\n\t Enter [1] --> Pits of Inferno --> EASY')
 		print('\t Enter [2] --> Inquisition Quest --> MEDIUM')
 		print('\t Enter [3] --> Ferumbras Tower --> HARD')
-		print('\n\t Enter [4] --> Play all areas --> Full Game Experience')
+		print('\t Enter [4] --> Play all areas --> Full Game Experience')
 		
 		areaOption = int(input('\t Area Option: '))
 
@@ -93,5 +93,8 @@ def Adventure_Game_Start( selectedArea, Player ):
 	elif selectedArea == 2:
 		Game_Of_Thrones_Start_Game( Player )
 
-	else:
+	elif selectedArea == 3:
 		Star_Wars__Start_Game( Player )
+	
+	else:
+		Full_Game_Start( Player )

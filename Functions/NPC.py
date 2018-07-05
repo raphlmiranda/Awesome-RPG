@@ -24,6 +24,8 @@
 #               camelCase = local variables, methods, attributes, parameters, arguments
 #               Under_Line = functions
 
+from SuperClass.GameStatistics import GameStatistics
+
 def NPC( Player ):
 
 	totalPrice = 0
@@ -49,6 +51,8 @@ def NPC( Player ):
 				if healthPotions == 0:
 					break
 
+
+				GameStatistics.totalHealthPotionsBought += healthPotions
 				totalPrice = healthPotions * 50
 				print('\t Confirm: [{}] Health Potions for [{}] Gold Coins?'.format(healthPotions, totalPrice))
 				print('\t Enter [1] --> Yes')
@@ -77,6 +81,7 @@ def NPC( Player ):
 					if manaPotions == 0:
 						break
 
+					GameStatistics.totalManaPotionsBought += manaPotions
 					totalPrice = manaPotions * 50
 					print('\t Confirm: {} for {} gold coins?'.format(manaPotions, totalPrice))
 					print('\t Enter [1] --> Yes')

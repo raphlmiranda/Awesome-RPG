@@ -157,7 +157,7 @@ class Paladin(Warrior):
 			baseAttackFirst = baseAttack * 1.2
 			baseAttackSecond = baseAttack * 1.5
 
-			print('\n\t ' + self.getCharacterName() + " says: EXORI ICO")
+			print('\n\t ' + self.getCharacterName() + " says: Expelliarmus")
 
 			spellDamage = randint(baseAttackFirst, baseAttackFirst)
 
@@ -179,7 +179,7 @@ class Paladin(Warrior):
 			baseAttackFirst = baseAttack * 1.5
 			baseAttackSecond = baseAttack * 2.0
 
-			print('\n\t ' + self.getCharacterName() + " says: EXORI")
+			print('\n\t ' + self.getCharacterName() + " says: Wingardium Leviosa")
 
 			spellDamage = randint(baseAttackFirst, baseAttackFirst)
 
@@ -201,7 +201,7 @@ class Paladin(Warrior):
 			baseAttackFirst = baseAttack * 2.2
 			baseAttackSecond = baseAttack * 3.0
 
-			print('\n\t ' + self.getCharacterName() + " says: EXORI ICO")
+			print('\n\t ' + self.getCharacterName() + " says: Expecto PATRONUUUMMM")
 
 			spellDamage = randint(baseAttackFirst, baseAttackFirst)
 

@@ -219,7 +219,7 @@ class Mage(Character):
 
 		if( self.getCharacterCurrentlyMana() >= 200 ):
 
-			print('\t Player says: RADUKEEEEEEEEN')
+			print('\t Player says: HADOUKEEEN')
 
 			self.characterCurrentlyMana -= 200
 			self.characterTotalManaUsed += 200
@@ -280,6 +280,7 @@ class Mage(Character):
 
 		self.livingBeingCurrentlyLife += MAGE_REG_LIFE_EACH_TURN
 		print('\t Player Regenerate {} points of life.'.format(MAGE_REG_LIFE_EACH_TURN))
+		
 		# verify if life is already full
 		if self.getLivingBeingCurrentlyLife() > self.getLivingBeingTotalLife():
 			print('\t Health is full.')
@@ -287,6 +288,7 @@ class Mage(Character):
 
 		self.characterCurrentlyMana += MAGE_REG_MANA_EACH_TURN
 		print('\t Player Regenerated {} points of mana.'.format(MAGE_REG_MANA_EACH_TURN))
+		
 		# verify if mana is already full
 		if self.getCharacterCurrentlyMana() > self.getMageTotalMana():
 			print('\t Mana is full.')
