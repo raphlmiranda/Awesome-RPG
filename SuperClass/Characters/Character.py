@@ -196,7 +196,7 @@ class Character(LivingBeing):
 				break			
 
 			elif manaPotionsToUse <= self.getCharacterCurrentlyManaPotions():
-				GameStatistics.totalHealthPotionsUsed += manaPotionsToUse
+				GameStatistics.totalManaPotionsUsed += manaPotionsToUse
 				print('\n')
 				while manaPotionsToUse != 0:
 					manaCure = randint(75, 125)

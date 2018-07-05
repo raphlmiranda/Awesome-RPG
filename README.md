@@ -115,10 +115,27 @@
 
 <p align="center">
   <p>
+    Alpha Version 0.3.8- Creating Character - 04/08/2018
+  </p>
+    <img src="creating-character.jpg" alt="" width="1360" height="500">
+  <p>
     Alpha Version 0.3.6 - 10/05/2018
   </p>
     <img src="alpha-version.jpg" alt="" width="1360" height="500">
-  </a>
+  <p>
+    Alpha Version 0.3.8 - Using Potions - 04/08/2018
+  </p>
+    <img src="using-potion.jpg" alt="" width="1360" height="500">
+  <p>
+    Alpha Version 0.3.8 - Starting Boss Fight - 04/08/2018
+  </p>
+    <img src="starting-boss-fight.jpg" alt="" width="1360" height="500">
+  <p>
+    Alpha Version 0.3.8 - End Game - 04/08/2018
+  </p>
+    <img src="end-game.jpg" alt="" width="1360" height="500">
+
+</p>
 
 
 

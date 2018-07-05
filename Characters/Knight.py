@@ -56,6 +56,7 @@ Under_Line = Functions and Modules
 from SuperClass.Characters.Character import Character
 from SuperClass.Characters.Warrior import	Warrior
 from random import randint
+from SuperClass.GameStatistics import GameStatistics
 
 from Global.Characters_Global_Variables import KNIGHT_INITIAL_LIFE, \
 											   KNIGHT_INITIAL_MANA, \
@@ -169,6 +170,7 @@ class Knight(Warrior):
 
 			print('\t Spell Damage: {}'.format(spellDamage))
 
+			GameStatistics.totalManaUsed += self.getLightSpellManaUsed()
 			self.characterCurrentlyMana -= self.getLightSpellManaUsed()
 
 			# update magic level
@@ -200,6 +202,7 @@ class Knight(Warrior):
 
 			print('\t Spell Damage: {}'.format(spellDamage))
 
+			GameStatistics.totalManaUsed += self.getMediumSpellManaUsed()
 			self.characterCurrentlyMana -= self.getMediumSpellManaUsed()
 
 			# update magic level
@@ -232,6 +235,7 @@ class Knight(Warrior):
 
 			print('\t Spell Damage: {}'.format(spellDamage))
 
+			GameStatistics.totalManaUsed += self.getStrongSpellManaUsed()
 			self.characterCurrentlyMana -= self.getStrongSpellManaUsed()
 
 			# update magic level

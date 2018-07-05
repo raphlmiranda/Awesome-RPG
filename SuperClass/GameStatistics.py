@@ -118,15 +118,17 @@ class GameStatistics(object):
 
 	@staticmethod
 	def getGameStatistics():
-		#getTotalGameTimeUntilPlayerDies
-		staticmethod(getTotalDamageToMonsters())
-		staticmethod(getTotalDamageTakenFromMonsters())
-		staticmethod(getTotalManaUsed())
-		staticmethod(getTotalSpellsUsed())
-		staticmethod(getTotalAttacksUsed())
-		staticmethod(getTotalHealthPotionsUsed())
-		staticmethod(getTotalManaPotionsUsed())
-		staticmethod(getTotalHealthPotionsBought())
-		staticmethod(getTotalManaPotionsBought())
-		staticmethod(getTotalGoldCoinsLooted())
-		staticmethod(getTotalGoldCoinsUsed())
+		#GameStatistics.getTotalGameTimeUntilPlayerDies
+		print('\n\t --- Game Statistics ---')
+		GameStatistics.getTotalDamageToMonsters()
+		GameStatistics.getTotalDamageTakenFromMonsters()
+		GameStatistics.getTotalManaUsed()
+		GameStatistics.getTotalSpellsUsed()
+		GameStatistics.getTotalAttacksUsed()
+		GameStatistics.getTotalHealthPotionsUsed()
+		GameStatistics.getTotalManaPotionsUsed()
+		GameStatistics.getTotalHealthPotionsBought()
+		GameStatistics.getTotalManaPotionsBought()
+		GameStatistics.getTotalGoldCoinsLooted()
+		GameStatistics.getTotalGoldCoinsUsed()
+		print('\n\n')

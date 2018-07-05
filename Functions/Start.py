@@ -124,7 +124,7 @@ def Start():
 
 		print('\t Would you like to play again?')
 		print('\t Enter [1] --> Yes, lets goo')
-		print('\t Enter [0] --> No, I am happy whit my perfomance today')
+		print('\t Enter [0] --> No, I am happy with my perfomance today')
 		
 		playAgain = int(input('\t Option: '))
 

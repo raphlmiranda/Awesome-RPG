@@ -237,7 +237,10 @@ def Round( Player , Monster ):
 		else:
 
 			if playerAction == 1: # PLAYER USE NORMAL ATTACK IN MONSTER
-				Monster.takeDamage(Player.getNormalAttack())
+				GameStatistics.totalAttacksUsed += 1
+				damageToMonster = Player.getNormalAttack()
+				GameStatistics.totalDamageToMonsters += damageToMonster
+				Monster.takeDamage(damageToMonster)
 
 			elif playerAction == 2: # PLAYER USE HEALTH POTION TO REGENERATE LIFE
 				Player.useHealthPotion()
@@ -246,12 +249,15 @@ def Round( Player , Monster ):
 				Player.useManaPotion()
 
 			elif playerAction == 41:
+				GameStatistics.totalSpellsUsed += 1
 				Monster.takeDamage(Player.useLightSpell())
 
 			elif playerAction == 42:
+				GameStatistics.totalSpellsUsed += 1
 				Monster.takeDamage(Player.useMediumSpell())
 
 			else:
+				GameStatistics.totalSpellsUsed += 1
 				Monster.takeDamage(Player.useStrongSpell())
 
 
